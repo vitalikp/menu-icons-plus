@@ -52,7 +52,9 @@ var menuIconOptions = {
                                  .getBranch('browser.preferences.');
     if (browserPrefs.getBoolPref('instantApply')) {
       var prefWin = document.getElementById('menuiconsplus-preferences');
-      prefWin.setAttribute('ondialogcancel', 'return menuIconOptions.accept();');
+      prefWin.addEventListener('dialogcancel', function() {
+        return menuIconOptions.accept();
+      });
     }
     this.initialized = true;
   },

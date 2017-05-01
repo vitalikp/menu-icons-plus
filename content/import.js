@@ -47,7 +47,9 @@ var menuIconImport = {
     helpBtn.label = this.strings.getString('helpButton');
     helpBtn.accessKey = this.strings.getString('helpAccessKey');
     helpBtn.tooltipText = this.strings.getString('helpToolTip');
-    helpBtn.setAttribute('oncommand', 'menuIconImport.showHelp();'); // the "onextra1" wizard attribute doesn't seem to work for some reason
+    helpBtn.addEventListener('command', function() {
+      menuIconImport.showHelp();// the "onextra1" wizard attribute doesn't seem to work for some reason
+    });
     helpBtn.hidden = false;
     this.initialized = true;
   },
