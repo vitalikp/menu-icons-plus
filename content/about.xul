@@ -59,7 +59,7 @@
           </hbox>
           <separator class="thin"/>
           <description value="&createdBy;" style="font-weight: bold;"/>
-          <description value="Justin Rodes"/>
+          <label id="extensionCreatedBy"/>
         </vbox>
       </hbox>
       <separator class="thin"/>

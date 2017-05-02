@@ -10,6 +10,9 @@ function init()
 	var extensionVersion = document.getElementById("extensionVersion");
 	extensionVersion.setAttribute("value", extensionsStrings.getFormattedString("aboutVersion", [addon.version]));
 
+	var extensionCreatedBy = document.getElementById("extensionCreatedBy");
+	extensionCreatedBy.setAttribute("value", addon.creator);
+
 	var extensionHomepage = document.getElementById("extensionHomepage");
 	extensionHomepage.setAttribute("value", addon.name);
 	extensionHomepage.setAttribute("url", addon.homepageURL);
