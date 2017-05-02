@@ -5,12 +5,14 @@
     <em:type>2</em:type>
     <em:name>Menu Icons Plus</em:name>
     <em:version>3.2.1</em:version>
-    <em:creator>Justin Rodes</em:creator>
+    <em:creator>vitalikp</em:creator>
     <em:iconURL>chrome://menuiconsplus/skin/menuiconsplus.png</em:iconURL>
     <em:optionsURL>chrome://menuiconsplus/content/options.xul</em:optionsURL>
     <em:aboutURL>chrome://menuiconsplus/content/about.xul</em:aboutURL>
     <em:homepageURL>https://github.com/vitalikp/menu-icons-plus</em:homepageURL>
     <em:multiprocessCompatible>true</em:multiprocessCompatible>
+    
+    <em:developer>Justin Rodes</em:developer>
 
     <em:localized>
       <Description>
