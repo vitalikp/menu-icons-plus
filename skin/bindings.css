@@ -10,9 +10,6 @@
 .menuitem-tooltip {
   -moz-binding: url("chrome://menuiconsplus/content/bindings.xml#iconic-menuitem-tooltip") !important;
 }
-splitmenu {
-  -moz-binding: url("chrome://menuiconsplus/content/bindings.xml#iconic-splitmenu") !important;
-}
 
 /* temporary fix for Web Developer */
 *:not(menulist) > menupopup menuitem.web-developer-generated-menu:not([description]):not(.menuitem-non-iconic):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
@@ -22,11 +19,6 @@ splitmenu {
 /* fix for Gmail Manager */
 statusbarpanel.gmanager-account-info > menupopup > menuitem.gmanager-toolbar-menuitem {
   -moz-binding: url("chrome://gmanager/content/overlay.xml#gmanager-toolbar-menuitem") !important;
-}
-
-/* fix for DownThemAll */
-#DownThemAll splitmenu {
-  -moz-binding: url("chrome://dta/content/common/bindings.xml#splitmenu") !important;
 }
 
 /* fix for Video DownloadHelper */

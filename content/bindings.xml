@@ -36,13 +36,4 @@
       </constructor>
     </implementation>
   </binding>
-  <binding id="iconic-splitmenu" extends="chrome://browser/content/urlbarBindings.xml#splitmenu">
-    <implementation>
-      <constructor>
-        <![CDATA[
-          this.setAttribute('iconic', 'true');
-        ]]>
-      </constructor>
-    </implementation>
-  </binding>
 </bindings>
