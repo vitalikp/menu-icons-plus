@@ -54,13 +54,6 @@
           <description value="&createdBy;" style="font-weight: bold;"/>
           <description value="Justin Rodes"/>
         </vbox>
-        <spacer flex="1"/>
-        <image src="chrome://menuiconsplus/skin/donate.gif"
-               class="url"
-               onclick="openUILinkIn('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=E673HGRXNXE2N', 'tab'); window.close();"
-               tooltiptext="&donate.tooltip;"
-               width="122"
-               height="47"/>
       </hbox>
       <separator class="thin"/>
       <description value="&contributors;" style="font-weight: bold;"/>
