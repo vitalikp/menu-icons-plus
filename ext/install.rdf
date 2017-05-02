@@ -9,7 +9,7 @@
     <em:iconURL>chrome://menuiconsplus/skin/menuiconsplus.png</em:iconURL>
     <em:optionsURL>chrome://menuiconsplus/content/options.xul</em:optionsURL>
     <em:aboutURL>chrome://menuiconsplus/content/about.xul</em:aboutURL>
-    <em:homepageURL>http://www.codedawn.com/menu-icons-plus.php</em:homepageURL>
+    <em:homepageURL>https://github.com/vitalikp/menu-icons-plus</em:homepageURL>
     <em:multiprocessCompatible>true</em:multiprocessCompatible>
 
     <em:localized>
