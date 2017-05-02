@@ -14,21 +14,6 @@
 
     <em:localized>
       <Description>
-        <em:locale>en-US</em:locale>
-        <em:name>Menu Icons Plus</em:name>
-        <em:contributor>Everaldo Coelho - Crystal Project icons (www.everaldo.com)</em:contributor>
-        <em:contributor>Mark James - Silk icons (www.famfamfam.com)</em:contributor>
-        <em:contributor>Oxygen team - Oxygen icons (www.oxygen-icons.org)</em:contributor>
-        <em:contributor>Tango Desktop Project team - Tango icons (tango.freedesktop.org)</em:contributor>
-        <em:contributor>Yusuke Kamiyamane - Fugue icons (p.yusukekamiyamane.com)</em:contributor>
-        <em:translator>BlackJack - fr-FR</em:translator>
-        <em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
-        <em:description>Menu icon sets and tweaks.</em:description>
-      </Description>
-    </em:localized>
-
-    <em:localized>
-      <Description>
         <em:locale>es-MX</em:locale>
         <em:name>Menu Icons Plus</em:name>
         <em:contributor>Everaldo Coelho - iconos Crystal Project (www.everaldo.com)</em:contributor>
