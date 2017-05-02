@@ -42,6 +42,10 @@
 
   <script type="application/javascript" src="chrome://menuiconsplus/content/about.js"/>
 
+  <stringbundleset id="aboutSet">
+    <stringbundle id="extensionsStrings" src="chrome://menuiconsplus/locale/menuiconsplus.properties"/>
+  </stringbundleset>
+
   <groupbox align="center" orient="horizontal">
     <vbox>
       <hbox align="start">
@@ -50,7 +54,7 @@
             <image src="chrome://menuiconsplus/skin/menuiconsplus.png"/>
             <vbox>
               <label id="extensionName" style="font-weight: bold; font-size: large;"/>
-              <description value="&version; 3.2"/>
+              <label id="extensionVersion" crop="end"/>
             </vbox>
           </hbox>
           <separator class="thin"/>
