@@ -116,7 +116,7 @@ var menuIconOptions = {
   },
   doExport: function(aIconSet) {
     Components.utils.import('resource://gre/modules/AddonManager.jsm');
-    AddonManager.getAddonByID('menuiconsplus@codedawn.com', function(addon) {
+    AddonManager.getAddonByID('menuiconsplus@vitalikp', function(addon) {
       var addonDir = addon.getResourceURI('').QueryInterface(Components.interfaces.nsIFileURL).file,
           pngFile = addonDir.clone();
       pngFile.append('skin');
