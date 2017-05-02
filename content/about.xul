@@ -90,9 +90,7 @@
       <description value="&translator2;"/>
       <separator class="thin"/>
       <description value="&homepage;" style="font-weight: bold;"/>
-      <description value="http://www.codedawn.com/"
-                   class="url"
-                   onclick="openUILinkIn('http://www.codedawn.com/menu-icons-plus.php', 'tab'); window.close();"/>
+      <label id="extensionHomepage" class="url" onclick="openHomePage(event);"/>
     </vbox>
   </groupbox>
   <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js"/>
