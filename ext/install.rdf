@@ -11,7 +11,7 @@
     <em:aboutURL>chrome://menuiconsplus/content/about.xul</em:aboutURL>
     <em:homepageURL>https://github.com/vitalikp/menu-icons-plus</em:homepageURL>
     <em:multiprocessCompatible>true</em:multiprocessCompatible>
-    
+
     <em:developer>Justin Rodes</em:developer>
 
     <em:localized>
