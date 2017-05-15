@@ -8,6 +8,11 @@ menuitem[type="checkbox"]:not([checked="true"]) {
   list-style-image: none !important;
 }
 
+menuitem[type="checkbox"] .menu-iconic-left
+{
+  list-style-image: none !important;
+}
+
 /* Radio (option) button menuitems */
 menuitem[type="radio"][checked="true"],
 menuitem[type="radio"]:not([flagitem="true"]):not([checked="true"]) {
