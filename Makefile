@@ -15,7 +15,7 @@ FILES = \
 	skin
 
 
-ZIP = /usr/bin/zip -rv
+ZIP = /usr/bin/zip -r
 RM = /usr/bin/rm -v
 
 all: $(EXT)
@@ -23,7 +23,7 @@ all: $(EXT)
 $(EXT):
 	@echo "build '$(EXT)' extension"
 	@cd ext; $(ZIP) ../$(EXT).xpi $(EXT_FILES)
-	$(ZIP) $(EXT).xpi $(FILES)
+	@$(ZIP) $(EXT).xpi $(FILES)
 
 clean:
 	@if [ -e $(EXT).xpi ] ; then \
