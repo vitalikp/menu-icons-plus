@@ -523,6 +523,9 @@ menuitem[key="key_viewSource"],
 #fullScreenItem:not([checked="true"]),
 #appmenu_fullScreen:not([checked="true"])
 { -moz-image-region: rect(32px, 128px, 48px, 112px) !important; list-style-image: url("Silk.png") !important; }
+#fullScreenItem[checked="true"],
+#appmenu_fullScreen[checked="true"]
+{ -moz-image-region: rect(224px, 32px, 240px, 16px) !important; list-style-image: url("Silk.png") !important; }
 
 /* history */
 menuitem[oncommand="toggleSidebar('viewHistorySidebar');"],
