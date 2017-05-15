@@ -13,6 +13,11 @@ menuitem[checked="true"] > .menu-iconic-left {
   -moz-appearance: menuimage !important;
 }
 
+menuitem[type="checkbox"]:not([checked="true"]) > .menu-iconic-left
+{
+  list-style-image: none !important;
+}
+
 menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
 menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
 menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
@@ -22,6 +27,7 @@ menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
 /* Checkbox menuitems */
 menuitem[checked="true"],
 menuitem[type="checkbox"][checked="true"],
+menuitem[type="checkbox"][checked="true"] > .menu-iconic-left,
 .subviewbutton[checked="true"],
 #web-developer-context menuitem[type="checkbox"][checked="true"] .menu-iconic-left,
 #web-developer-menu menuitem[type="checkbox"][checked="true"] .menu-iconic-left,
