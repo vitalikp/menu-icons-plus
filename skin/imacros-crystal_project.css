@@ -17,43 +17,43 @@ img[src="chrome://imacros/content/editor/editarea/edit_area/images/autocompletio
 { display: none; max-width: 16px; max-height: 16px; }
 
 #toolbar_1 a#a_save
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -128px -96px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -128px -96px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_load
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -96px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -96px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_undo
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat 0px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat 0px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_redo
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -16px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -16px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_search
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -48px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -48px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_new_document
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -112px -144px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -112px -144px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_go_to_line
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -128px -80px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -128px -80px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_change_smooth_selection
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -16px -192px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -16px -192px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_reset_highlight
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -16px -176px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -16px -176px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_highlight
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -128px -176px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -128px -176px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_help
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -48px -64px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -48px -64px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_fullscreen
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat -112px -32px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat -112px -32px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 #toolbar_1 a#a_autocompletion
-{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Crystal Project.png") no-repeat 0px -144px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("CrystalProject.png") no-repeat 0px -144px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
 
 img.editAreaSeparatorLine[src="chrome://imacros/content/editor/editarea/edit_area/images/spacer.gif"]
 { vertical-align: top !important; margin-top: 2px !important; }

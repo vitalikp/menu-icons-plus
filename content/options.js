@@ -205,7 +205,7 @@ var menuIconOptions = {
       iconSetMenu.removeChild(iconSetMenu.lastChild);
     }
     var iconSets = new Array({label: this.strings.getString('labelNone'), value: ''},
-                             {label: 'Crystal Project', value: 'chrome://menuiconsplus/skin/Crystal Project.png'},
+                             {label: 'Crystal Project', value: 'chrome://menuiconsplus/skin/CrystalProject.png'},
                              {label: 'Fugue', value: 'chrome://menuiconsplus/skin/Fugue.png'},
                              {label: 'Oxygen', value: 'chrome://menuiconsplus/skin/Oxygen.png'},
                              {label: 'Silk', value: 'chrome://menuiconsplus/skin/Silk.png'},

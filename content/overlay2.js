@@ -106,7 +106,7 @@ var menuIconSecondary = {
         }
         break;
       case 'chrome://imacros/content/edit.xul':
-        if (iconSet == 'chrome://menuiconsplus/skin/Crystal Project.css')
+        if (iconSet == 'chrome://menuiconsplus/skin/CrystalProject.css')
           this.loadStyleSheet('chrome://menuiconsplus/skin/imacros-crystal_project.css');
         else if (iconSet == 'chrome://menuiconsplus/skin/Silk.css')
           this.loadStyleSheet('chrome://menuiconsplus/skin/imacros-silk.css');
