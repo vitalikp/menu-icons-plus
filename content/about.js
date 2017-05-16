@@ -13,6 +13,9 @@ function init()
 	var extensionCreatedBy = document.getElementById("extensionCreatedBy");
 	extensionCreatedBy.setAttribute("value", addon.creator);
 
+	var extensionDeveloper1 = document.getElementById("extensionDeveloper1");
+	extensionDeveloper1.setAttribute("value", addon.developers[0].name);
+
 	var extensionHomepage = document.getElementById("extensionHomepage");
 	extensionHomepage.setAttribute("value", addon.name);
 	extensionHomepage.setAttribute("url", addon.homepageURL);

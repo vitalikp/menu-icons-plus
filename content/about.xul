@@ -63,6 +63,9 @@
         </vbox>
       </hbox>
       <separator class="thin"/>
+      <description value="&developers;" style="font-weight: bold;"/>
+      <label id="extensionDeveloper1"/>
+      <separator class="thin"/>
       <description value="&contributors;" style="font-weight: bold;"/>
       <description value="&contrib1;"
                    class="url"
