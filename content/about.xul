@@ -43,7 +43,7 @@
   <script type="application/javascript" src="chrome://menuiconsplus/content/about.js"/>
 
   <stringbundleset id="aboutSet">
-    <stringbundle id="extensionsStrings" src="chrome://menuiconsplus/locale/menuiconsplus.properties"/>
+    <stringbundle id="extensionsStrings" src="chrome://menuiconsplus/locale/about.properties"/>
   </stringbundleset>
 
   <groupbox align="center" orient="horizontal">
