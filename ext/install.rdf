@@ -18,11 +18,6 @@
 		<em:localized>
 			<Description>
 				<em:locale>es-MX</em:locale>
-				<em:contributor>Everaldo Coelho - iconos Crystal Project (www.everaldo.com)</em:contributor>
-				<em:contributor>Mark James - iconos Silk (www.famfamfam.com)</em:contributor>
-				<em:contributor>Grupo Oxygen - iconos Oxygen (www.oxygen-icons.org)</em:contributor>
-				<em:contributor>Tango Desktop Project - iconos Tango (tango.freedesktop.org)</em:contributor>
-				<em:contributor>Yusuke Kamiyamane - iconos Fugue (p.yusukekamiyamane.com)</em:contributor>
 				<em:translator>BlackJack - fr-FR</em:translator>
 				<em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
 			</Description>
@@ -31,11 +26,6 @@
 		<em:localized>
 			<Description>
 				<em:locale>sv-SE</em:locale>
-				<em:contributor>Everaldo Coelho - Crystal Project-ikoner (www.everaldo.com)</em:contributor>
-				<em:contributor>Mark James - Silk-ikoner (www.famfamfam.com)</em:contributor>
-				<em:contributor>Gruppen bakom Tango Desktop Project - Tango-ikoner (tango.freedesktop.org)</em:contributor>
-				<em:contributor>Gruppen bakom Oxygen - Oxygen-ikoner (www.oxygen-icons.org)</em:contributor>
-				<em:contributor>Yusuke Kamiyamane - Fugue-ikoner (p.yusukekamiyamane.com)</em:contributor>
 				<em:translator>BlackJack - fr-FR</em:translator>
 				<em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
 			</Description>
@@ -44,11 +34,6 @@
 		<em:localized>
 			<Description>
 				<em:locale>fr-FR</em:locale>
-				<em:contributor>Everaldo Coelho - icônes Crystal Project (www.everaldo.com)</em:contributor>
-				<em:contributor>Mark James - icônes Silk (www.famfamfam.com)</em:contributor>
-				<em:contributor>Oxygen Project - icônes Oxygen (www.oxygen-icons.org)</em:contributor>
-				<em:contributor>Tango Desktop Project - icônes Tango (tango.freedesktop.org)</em:contributor>
-				<em:contributor>Yusuke Kamiyamane - icônes Fugue (p.yusukekamiyamane.com)</em:contributor>
 				<em:translator>BlackJack - fr-FR</em:translator>
 				<em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
 			</Description>
