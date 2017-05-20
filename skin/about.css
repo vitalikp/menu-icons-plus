@@ -1,7 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* About box */
-#menuiconsplus-about .url {
+#menuiconsplus-about .text-link {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
