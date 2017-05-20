@@ -67,26 +67,7 @@
       <label id="extensionDeveloper1"/>
       <separator class="thin"/>
       <description value="&contributors;" style="font-weight: bold;"/>
-      <label value="&contrib1;"
-                   class="text-link"
-                   tooltiptext="www.everaldo.com"
-                   onclick="openUILinkIn('http://www.everaldo.com/', 'tab'); window.close();"/>
-      <label value="&contrib2;"
-                   class="text-link"
-                   tooltiptext="www.famfamfam.com"
-                   onclick="openUILinkIn('http://www.famfamfam.com/', 'tab'); window.close();"/>
-      <label value="&contrib3;"
-                   class="text-link"
-                   tooltiptext="www.oxygen-icons.org"
-                   onclick="openUILinkIn('http://www.oxygen-icons.org/', 'tab'); window.close();"/>
-      <label value="&contrib4;"
-                   class="text-link"
-                   tooltiptext="tango.freedesktop.org"
-                   onclick="openUILinkIn('http://tango.freedesktop.org/', 'tab'); window.close();"/>
-      <label value="&contrib5;"
-                   class="text-link"
-                   tooltiptext="p.yusukekamiyamane.com"
-                   onclick="openUILinkIn('http://p.yusukekamiyamane.com/', 'tab'); window.close();"/>
+      <vbox flex="1" id="extensionContributors" class="boxIndent"/>
       <separator class="thin"/>
       <description value="&translators;" style="font-weight: bold;"/>
       <description value="&translator1;"/>
