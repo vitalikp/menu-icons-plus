@@ -8,3 +8,5 @@ pref('extensions.menuiconsplus@vitalikp.contributor.2', 'chrome://menuiconsplus/
 pref('extensions.menuiconsplus@vitalikp.contributor.3', 'chrome://menuiconsplus/locale/about.properties');
 pref('extensions.menuiconsplus@vitalikp.contributor.4', 'chrome://menuiconsplus/locale/about.properties');
 pref('extensions.menuiconsplus@vitalikp.contributor.5', 'chrome://menuiconsplus/locale/about.properties');
+pref('extensions.menuiconsplus@vitalikp.translator.1', 'chrome://menuiconsplus/locale/about.properties');
+pref('extensions.menuiconsplus@vitalikp.translator.2', 'chrome://menuiconsplus/locale/about.properties');

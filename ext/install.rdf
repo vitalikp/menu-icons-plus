@@ -18,24 +18,18 @@
 		<em:localized>
 			<Description>
 				<em:locale>es-MX</em:locale>
-				<em:translator>BlackJack - fr-FR</em:translator>
-				<em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
 			</Description>
 		</em:localized>
 
 		<em:localized>
 			<Description>
 				<em:locale>sv-SE</em:locale>
-				<em:translator>BlackJack - fr-FR</em:translator>
-				<em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
 			</Description>
 		</em:localized>
 
 		<em:localized>
 			<Description>
 				<em:locale>fr-FR</em:locale>
-				<em:translator>BlackJack - fr-FR</em:translator>
-				<em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
 			</Description>
 		</em:localized>
 
