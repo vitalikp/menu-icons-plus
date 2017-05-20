@@ -28,6 +28,9 @@ function init()
 	var extensionContributors = document.getElementById("extensionContributors");
 	appendLabels(extensionContributors, addon.contributors, contribUrls);
 
+	var extensionTranslators = document.getElementById("extensionTranslators");
+	appendLabels(extensionTranslators, addon.translators);
+
 	var extensionHomepage = document.getElementById("extensionHomepage");
 	extensionHomepage.setAttribute("value", addon.name);
 	extensionHomepage.setAttribute("url", addon.homepageURL);
