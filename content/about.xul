@@ -73,7 +73,7 @@
       <vbox flex="1" id="extensionTranslators" class="boxIndent"/>
       <separator class="thin"/>
       <description value="&homepage;" style="font-weight: bold;"/>
-      <label id="extensionHomepage" class="text-link" onclick="openHomePage(event);"/>
+      <label id="extensionHomepage" class="text-link" onclick="openUrl(event);"/>
     </vbox>
   </groupbox>
   <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js"/>

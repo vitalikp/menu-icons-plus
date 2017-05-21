@@ -51,14 +51,15 @@ function appendLabels(node,list,urls)
 		{
 			label.setAttribute("class", "text-link");
 			label.setAttribute("tooltiptext", urls[i-1]);
-			label.setAttribute("onclick", "openUILinkIn('http://" + urls[i-1] + "/', 'tab'); window.close();");
+			label.setAttribute("url", 'http://' + urls[i-1] + '/');
+			label.addEventListener("click", function(aEvent){ openUrl(aEvent); });
 		}
 		
 		node.appendChild(label);
 	}
 }
 
-function openHomePage(aEvent)
+function openUrl(aEvent)
 {
 	if (aEvent.button != 0)
 		return;
