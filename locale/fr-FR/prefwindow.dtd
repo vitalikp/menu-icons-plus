@@ -22,6 +22,9 @@
 <!ENTITY alt.checkmarks.radio.accesskey "a">
 <!ENTITY default.checkmarks.radio.label "Ceux de Firefox par défaut">
 <!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY color.icons.checkbox.label "Afficher les icônes colorées">
+<!ENTITY color.icons.checkbox.accesskey "A">
+<!ENTITY color.icons.checkbox.tooltip "Afficher les icônes colorées.">
 <!ENTITY hide.disabled.checkbox.label "Cacher les icones des éléments de menu désactivés">
 <!ENTITY hide.disabled.checkbox.accesskey "C">
 <!ENTITY hide.disabled.checkbox.tooltip "N'affiche pas d'icone à côté des commandes de menu qui sont inactives (grisées).">

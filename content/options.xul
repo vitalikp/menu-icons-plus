@@ -73,6 +73,7 @@
   <prefpane id="menuiconsplus-prefpane2" label="&menu.prefpane;">
     <preferences>
       <preference id="checkmark-style-pref" name="extensions.menuiconsplus.checkmarkstyle" type="int"/>
+      <preference id="color-icons-pref" name="extensions.menuiconsplus.showcoloredicons" type="bool"/>
       <preference id="hide-disabled-pref" name="extensions.menuiconsplus.hidedisabledmenuicons" type="bool"/>
       <preference id="theme-icons-pref" name="extensions.menuiconsplus.usethememenuicons" type="bool"/>
     </preferences>
@@ -89,6 +90,8 @@
     </groupbox>
     <separator class="thin"/>
     <groupbox>
+      <checkbox id="color-icons-checkbox" label="&color.icons.checkbox.label;" accesskey="&color.icons.checkbox.accesskey;"
+                tooltiptext="&color.icons.checkbox.tooltip;" preference="color-icons-pref"/>
       <checkbox id="hide-disabled-checkbox" label="&hide.disabled.checkbox.label;" accesskey="&hide.disabled.checkbox.accesskey;"
                 tooltiptext="&hide.disabled.checkbox.tooltip;" preference="hide-disabled-pref"/>
       <checkbox id="theme-icons-checkbox" label="&theme.icons.checkbox.label;" accesskey="&theme.icons.checkbox.accesskey;"

@@ -242,6 +242,8 @@ var menuIconOptions = {
       checkmarkStyle = 'chrome://menuiconsplus/skin/iconset_checkmarks_radiobuttons.css';
     var newArray = new Array({name: 'checkmarkstyle',
                               value: checkmarkStyle},
+                             {name: 'showcoloredicons',
+                              value: (document.getElementById('color-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/color-icons.css' : ''},
                              {name: 'hidedisabledmenuicons',
                               value: (document.getElementById('hide-disabled-checkbox').checked) ? 'chrome://menuiconsplus/skin/hide_disabled.css' : ''},
                              {name: 'usethememenuicons',

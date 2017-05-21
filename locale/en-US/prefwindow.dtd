@@ -22,6 +22,9 @@
 <!ENTITY alt.checkmarks.radio.accesskey "A">
 <!ENTITY default.checkmarks.radio.label "Firefox default">
 <!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY color.icons.checkbox.label "Show colored icons">
+<!ENTITY color.icons.checkbox.accesskey "C">
+<!ENTITY color.icons.checkbox.tooltip "Show colored icons.">
 <!ENTITY hide.disabled.checkbox.label "Hide icons of disabled menu items">
 <!ENTITY hide.disabled.checkbox.accesskey "H">
 <!ENTITY hide.disabled.checkbox.tooltip "Does not show icons next to menu commands which are disabled (grayed out).">

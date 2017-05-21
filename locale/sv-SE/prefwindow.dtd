@@ -22,6 +22,9 @@
 <!ENTITY alt.checkmarks.radio.accesskey "A">
 <!ENTITY default.checkmarks.radio.label "Firefox standardschema">
 <!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY color.icons.checkbox.label "Visa färgade ikoner">
+<!ENTITY color.icons.checkbox.accesskey "V">
+<!ENTITY color.icons.checkbox.tooltip "Visa färgade ikoner.">
 <!ENTITY hide.disabled.checkbox.label "Göm ikoner för icke valbara menyobjekt">
 <!ENTITY hide.disabled.checkbox.accesskey "G">
 <!ENTITY hide.disabled.checkbox.tooltip "Visar inte ikoner bredvid menyobjekt som är inaktiverade (nedtonade i grått).">

@@ -1,0 +1,9 @@
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* disable grayscale color filter */
+.menuitem-iconic[data-usercontextid] > .menu-iconic-left > .menu-iconic-icon,
+#context-navigation > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon
+{
+	filter: none !important;
+}

@@ -22,6 +22,9 @@
 <!ENTITY alt.checkmarks.radio.accesskey "M">
 <!ENTITY default.checkmarks.radio.label "Estilo predeterminado de Firefox">
 <!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY color.icons.checkbox.label "Mostrar iconos de colores">
+<!ENTITY color.icons.checkbox.accesskey "M">
+<!ENTITY color.icons.checkbox.tooltip "Mostrar iconos de colores.">
 <!ENTITY hide.disabled.checkbox.label "Ocultar los iconos de elementos de menú deshabilitados">
 <!ENTITY hide.disabled.checkbox.accesskey "O">
 <!ENTITY hide.disabled.checkbox.tooltip "No muestra iconos junto a elementos de menú que están deshabilitados (atenuados).">
