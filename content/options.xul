@@ -37,7 +37,7 @@
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://menuiconsplus/skin/options.css" type="text/css"?>
-<!DOCTYPE prefwindow SYSTEM "chrome://menuiconsplus/locale/prefwindow.dtd">
+<!DOCTYPE prefwindow SYSTEM "chrome://menuiconsplus/locale/options.dtd">
 <prefwindow id="menuiconsplus-preferences" title="&prefwindow.title;" ondialogaccept="return menuIconOptions.accept();"
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
