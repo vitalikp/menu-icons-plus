@@ -12,6 +12,7 @@
 		<em:homepageURL>https://github.com/vitalikp/menu-icons-plus</em:homepageURL>
 		<em:multiprocessCompatible>true</em:multiprocessCompatible>
 		<em:unpack>true</em:unpack>
+		<em:updateURL>https://vitalikp.github.io/firefox/addons/menu-icons-plus/update.rdf</em:updateURL>
 
 		<em:developer>Justin Rodes</em:developer>
 
