@@ -1,0 +1,33 @@
+<!ENTITY prefwindow.title "Налаштування «Menu Icons Plus»">
+<!ENTITY header1.description "Це може потребувати перезапуск Firefox, щоб зміни вступили в силу.">
+<!ENTITY header2.description "Деякі параметри можуть бути не сумісні з певними темами.">
+<!ENTITY iconset.prefpane "Набір значків">
+<!ENTITY iconset.caption "Перегляд набору значків">
+<!ENTITY iconset.menulist.label "Набір значків:">
+<!ENTITY iconset.menulist.accesskey "Н">
+<!ENTITY advanced.button.label "Додаткові">
+<!ENTITY advanced.button.accesskey "A">
+<!ENTITY import.menuitem.label "Імпорт…">
+<!ENTITY import.menuitem.accesskey "I">
+<!ENTITY export.menuitem.label "Експорт…">
+<!ENTITY export.menuitem.accesskey "E">
+<!ENTITY delete.menuitem.label "Видалити">
+<!ENTITY delete.menuitem.accesskey "D">
+<!ENTITY menu.prefpane "Параметри меню">
+<!ENTITY menu.checkmarks.caption "Меню прапорців та радіо кнопок">
+<!ENTITY menu.checkmarks.tooltip "Зміна зовнішнього вигляду прапорців (і радіо кнопок) поруч з елементами меню, які їх мають.">
+<!ENTITY iconset.checkmarks.radio.label "Використовувати прапорці/радіо кнопки з набору значків">
+<!ENTITY iconset.checkmarks.radio.accesskey "В">
+<!ENTITY alt.checkmarks.radio.label "Використовувати альтернативні прапорці/радіо кнопки">
+<!ENTITY alt.checkmarks.radio.accesskey "А">
+<!ENTITY default.checkmarks.radio.label "Типові Firefox">
+<!ENTITY default.checkmarks.radio.accesskey "Т">
+<!ENTITY color.icons.checkbox.label "Показувати значки кольоровими">
+<!ENTITY color.icons.checkbox.accesskey "К">
+<!ENTITY color.icons.checkbox.tooltip "Показувати значки кольоровими.">
+<!ENTITY hide.disabled.checkbox.label "Приховувати значки вимкнених елементів меню">
+<!ENTITY hide.disabled.checkbox.accesskey "Х">
+<!ENTITY hide.disabled.checkbox.tooltip "Не показувати значки поруч з командами меню, котрі вимкнено (не активні).">
+<!ENTITY theme.icons.checkbox.label "Використовувати значки з поточної теми Firefox де можливо">
+<!ENTITY theme.icons.checkbox.accesskey "П">
+<!ENTITY theme.icons.checkbox.tooltip "Перевизначає поточний вибраний набір значків, замість відображання значків з вашої теми Firefox.">

@@ -3,6 +3,7 @@ locale menuiconsplus en-US locale/en-US/
 locale menuiconsplus es-MX locale/es-MX/
 locale menuiconsplus fr-FR locale/fr-FR/
 locale menuiconsplus sv-SE locale/sv-SE/
+locale menuiconsplus uk-UA locale/uk-UA/
 skin menuiconsplus classic/1.0 skin/
 overlay chrome://browser/content/browser.xul chrome://menuiconsplus/content/firefoxOverlay.xul
 overlay chrome://dta/content/dta/manager.xul chrome://menuiconsplus/content/secondaryOverlay.xul

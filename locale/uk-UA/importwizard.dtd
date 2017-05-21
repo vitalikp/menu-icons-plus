@@ -1,0 +1,12 @@
+<!ENTITY wizard.title "Імпорт набору значків">
+<!ENTITY page1.description "Для імпорту набору значків ви повинні надати файл PNG всіх значків розміром 16x16 пікселів у вашому наборі викладений у вигляді сітки у певному порядку (Для отримання більше інформації натисніть кнопку Допомога). Ім'я вашого файлу PNG буде ім'ям нового набору значків.">
+<!ENTITY import.image.textbox.label "Файл зображення для імпорту:">
+<!ENTITY import.image.textbox.accesskey "І">
+<!ENTITY import.browse.button.label "Огляд...">
+<!ENTITY import.browse.button.accesskey "О">
+<!ENTITY page2.description "В доповненні до файлу зображення набору значків, вам необхідно вказати таблицю стилів, що йде з ним. Якщо ви не маєте таблицю стилів, однак маєте правильно розміщені ваші значки в файлі зображення, «Menu Icons Plus» може сгенерувати основну таблицю стилів для вас. Або, ви можете вказати вашу власну таблицю стилів.">
+<!ENTITY generate.stylesheet.radio.label "Сгенерувати таблицю стилів для мене">
+<!ENTITY generate.stylesheet.radio.accesskey "С">
+<!ENTITY import.stylesheet.radio.label "Використовувати мою власну таблицю стилів:">
+<!ENTITY import.stylesheet.radio.accesskey "В">
+<!ENTITY page3.description "Будуть виконані наступні завдання:">
