@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 PACKAGE = menu-icons-plus
-VERSION = 3.2.3
+VERSION = 3.2.4-dev
 EXT = $(PACKAGE)-$(VERSION)
 
 EXT_FILES = \
