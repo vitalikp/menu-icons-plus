@@ -16,7 +16,6 @@ FILES = \
 
 
 ZIP = /usr/bin/zip -r -q
-RM = /usr/bin/rm -v
 
 all: $(EXT)
 
