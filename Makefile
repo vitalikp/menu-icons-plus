@@ -25,6 +25,8 @@ $(EXT):
 	@$(ZIP) $(EXT).xpi $(FILES)
 
 clean:
+	@echo -e '\e[1m$@ $(PACKAGE)\e[0m'
 	@if [ -e $(EXT).xpi ] ; then \
+		echo -e "  \e[1;31mRM\e[0m\t"$(EXT).xpi ; \
 		$(RM) $(EXT).xpi ; \
 	fi
