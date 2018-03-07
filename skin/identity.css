@@ -1,3 +1,13 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#identity-icon
+{
+	list-style-image: url("identity/default.svg") !important;
+}
+
+#identity-box:hover > #identity-icon:not(.no-hover),
+#identity-box[open=true] > #identity-icon
+{
+	list-style-image: url("identity/default-hover.svg") !important;
+}
