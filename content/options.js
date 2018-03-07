@@ -244,6 +244,8 @@ var menuIconOptions = {
                               value: checkmarkStyle},
                              {name: 'showcoloredicons',
                               value: (document.getElementById('color-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/color-icons.css' : ''},
+                             {name: 'showidentityicons',
+                              value: (document.getElementById('identity-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/identity.css' : ''},
                              {name: 'hidedisabledmenuicons',
                               value: (document.getElementById('hide-disabled-checkbox').checked) ? 'chrome://menuiconsplus/skin/hide_disabled.css' : ''},
                              {name: 'usethememenuicons',

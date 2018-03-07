@@ -25,6 +25,9 @@
 <!ENTITY color.icons.checkbox.label "Visa färgade ikoner">
 <!ENTITY color.icons.checkbox.accesskey "V">
 <!ENTITY color.icons.checkbox.tooltip "Visa färgade ikoner.">
+<!ENTITY identity.icons.checkbox.label "Show identity icons">
+<!ENTITY identity.icons.checkbox.accesskey "I">
+<!ENTITY identity.icons.checkbox.tooltip "Show identity icons.">
 <!ENTITY hide.disabled.checkbox.label "Göm ikoner för icke valbara menyobjekt">
 <!ENTITY hide.disabled.checkbox.accesskey "G">
 <!ENTITY hide.disabled.checkbox.tooltip "Visar inte ikoner bredvid menyobjekt som är inaktiverade (nedtonade i grått).">

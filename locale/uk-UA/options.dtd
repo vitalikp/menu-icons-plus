@@ -25,6 +25,9 @@
 <!ENTITY color.icons.checkbox.label "Показувати значки кольоровими">
 <!ENTITY color.icons.checkbox.accesskey "К">
 <!ENTITY color.icons.checkbox.tooltip "Показувати значки кольоровими.">
+<!ENTITY identity.icons.checkbox.label "Показувати значки «identity»">
+<!ENTITY identity.icons.checkbox.accesskey "I">
+<!ENTITY identity.icons.checkbox.tooltip "Показувати значки «identity».">
 <!ENTITY hide.disabled.checkbox.label "Приховувати значки вимкнених елементів меню">
 <!ENTITY hide.disabled.checkbox.accesskey "Х">
 <!ENTITY hide.disabled.checkbox.tooltip "Не показувати значки поруч з командами меню, котрі вимкнено (не активні).">

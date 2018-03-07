@@ -70,6 +70,9 @@ var menuIconsPlus = {
     // show colored icons
     if (this.prefs.getBoolPref('showcoloredicons'))
     	this.loadStyleSheet('chrome://menuiconsplus/skin/color-icons.css');
+    // show identity icons
+    if (this.prefs.getBoolPref('showidentityicons'))
+    	this.loadStyleSheet('chrome://menuiconsplus/skin/identity.css');
     // use theme icons
     if (this.prefs.getBoolPref('usethememenuicons') && !nonWindows) {
       this.loadStyleSheet('chrome://menuiconsplus/skin/browser_theme_icons.css');
