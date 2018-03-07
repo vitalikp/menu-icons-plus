@@ -11,3 +11,14 @@
 {
 	list-style-image: url("identity/default-hover.svg") !important;
 }
+
+#identity-box.grantedPermissions > #identity-icon
+{
+	list-style-image: url("identity/notice.svg") !important;
+}
+
+#identity-box.grantedPermissions:hover > #identity-icon:not(.no-hover),
+#identity-box.grantedPermissions[open=true] > #identity-icon
+{
+	list-style-image: url("identity/notice-hover.svg") !important;
+}
