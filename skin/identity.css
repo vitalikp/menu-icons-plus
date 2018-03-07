@@ -28,3 +28,8 @@
 {
 	background-image: url('identity/conn-not-secure.svg') !important;
 }
+
+#identity-popup-permissions-content
+{
+	background-image: url('identity/permissions.svg') !important;
+}
