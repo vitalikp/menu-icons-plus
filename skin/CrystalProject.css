@@ -871,6 +871,7 @@ menuitem[searchtype="lyrics"]
 { -moz-image-region: rect(80px, 48px, 96px, 32px) !important; list-style-image: url("CrystalProject.png") !important; }
 
 /* folder-closed */
+.downloadIconShow > .button-box > .button-icon,
 treechildren.fileTree::-moz-tree-image(isFolder),
 treechildren.dirTree::-moz-tree-image(closed),
 listbox#directory-listbox listitem,
