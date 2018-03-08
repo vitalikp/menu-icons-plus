@@ -42,7 +42,7 @@ function appendLabels(node,list,urls)
 {
 	let i = 0;
 	let label;
-	
+
 	while (i++ < list.length)
 	{
 		label = document.createElement("label");
@@ -54,7 +54,7 @@ function appendLabels(node,list,urls)
 			label.setAttribute("url", 'http://' + urls[i-1] + '/');
 			label.addEventListener("click", function(aEvent){ openUrl(aEvent); });
 		}
-		
+
 		node.appendChild(label);
 	}
 }
