@@ -25,9 +25,9 @@
 <!ENTITY color.icons.checkbox.label "Mostrar iconos de colores">
 <!ENTITY color.icons.checkbox.accesskey "M">
 <!ENTITY color.icons.checkbox.tooltip "Mostrar iconos de colores.">
-<!ENTITY identity.icons.checkbox.label "Show identity icons">
+<!ENTITY identity.icons.checkbox.label "Use identity icons">
 <!ENTITY identity.icons.checkbox.accesskey "I">
-<!ENTITY identity.icons.checkbox.tooltip "Show identity icons.">
+<!ENTITY identity.icons.checkbox.tooltip "Use identity icons.">
 <!ENTITY hide.disabled.checkbox.label "Ocultar los iconos de elementos de menú deshabilitados">
 <!ENTITY hide.disabled.checkbox.accesskey "O">
 <!ENTITY hide.disabled.checkbox.tooltip "No muestra iconos junto a elementos de menú que están deshabilitados (atenuados).">

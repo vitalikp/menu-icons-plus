@@ -25,9 +25,9 @@
 <!ENTITY color.icons.checkbox.label "Afficher les icônes colorées">
 <!ENTITY color.icons.checkbox.accesskey "A">
 <!ENTITY color.icons.checkbox.tooltip "Afficher les icônes colorées.">
-<!ENTITY identity.icons.checkbox.label "Show identity icons">
+<!ENTITY identity.icons.checkbox.label "Use identity icons">
 <!ENTITY identity.icons.checkbox.accesskey "I">
-<!ENTITY identity.icons.checkbox.tooltip "Show identity icons.">
+<!ENTITY identity.icons.checkbox.tooltip "Use identity icons.">
 <!ENTITY hide.disabled.checkbox.label "Cacher les icones des éléments de menu désactivés">
 <!ENTITY hide.disabled.checkbox.accesskey "C">
 <!ENTITY hide.disabled.checkbox.tooltip "N'affiche pas d'icone à côté des commandes de menu qui sont inactives (grisées).">
