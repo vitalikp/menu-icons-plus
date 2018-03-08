@@ -6,19 +6,17 @@
 	list-style-image: url("identity/default.png") !important;
 }
 
-#identity-box:hover > #identity-icon:not(.no-hover),
-#identity-box[open=true] > #identity-icon
+#identity-icon:hover
 {
 	list-style-image: url("identity/default-hover.png") !important;
 }
 
-#identity-box.grantedPermissions > #identity-icon
+.grantedPermissions > #identity-icon
 {
 	list-style-image: url("identity/notice.png") !important;
 }
 
-#identity-box.grantedPermissions:hover > #identity-icon:not(.no-hover),
-#identity-box.grantedPermissions[open=true] > #identity-icon
+.grantedPermissions:hover > #identity-icon:hover
 {
 	list-style-image: url("identity/notice-hover.png") !important;
 }
