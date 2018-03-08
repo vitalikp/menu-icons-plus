@@ -3,33 +3,33 @@
 
 #identity-icon
 {
-	list-style-image: url("identity/default.svg") !important;
+	list-style-image: url("identity/default.png") !important;
 }
 
 #identity-box:hover > #identity-icon:not(.no-hover),
 #identity-box[open=true] > #identity-icon
 {
-	list-style-image: url("identity/default-hover.svg") !important;
+	list-style-image: url("identity/default-hover.png") !important;
 }
 
 #identity-box.grantedPermissions > #identity-icon
 {
-	list-style-image: url("identity/notice.svg") !important;
+	list-style-image: url("identity/notice.png") !important;
 }
 
 #identity-box.grantedPermissions:hover > #identity-icon:not(.no-hover),
 #identity-box.grantedPermissions[open=true] > #identity-icon
 {
-	list-style-image: url("identity/notice-hover.svg") !important;
+	list-style-image: url("identity/notice-hover.png") !important;
 }
 
 #identity-popup-securityView,
 #identity-popup-security-content
 {
-	background-image: url('identity/conn-not-secure.svg') !important;
+	background-image: url('identity/conn-not-secure.png') !important;
 }
 
 #identity-popup-permissions-content
 {
-	background-image: url('identity/permissions.svg') !important;
+	background-image: url('identity/permissions.png') !important;
 }
