@@ -35,6 +35,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 const Ci = Components.interfaces;
+const Cu = Components.utils;
 const Cc = Components.classes;
 
 var menuIconOptions =
@@ -143,7 +144,7 @@ var menuIconOptions =
 
 	doExport: function(aIconSet)
 	{
-		Components.utils.import('resource://gre/modules/AddonManager.jsm');
+		Cu.import('resource://gre/modules/AddonManager.jsm');
 		AddonManager.getAddonByID('menuiconsplus@vitalikp', function(addon)
 		{
 			var addonDir = addon.getResourceURI('').QueryInterface(Ci.nsIFileURL).file,
@@ -192,7 +193,7 @@ var menuIconOptions =
 					}
 					catch (e)
 					{
-						Components.utils.reportError(e);
+						Cu.reportError(e);
 
 						if (e.name == 'NS_ERROR_FILE_ACCESS_DENIED')
 							menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorAccessDeniedMessage'));
@@ -212,7 +213,7 @@ var menuIconOptions =
 			}
 			catch (e)
 			{
-				Components.utils.reportError(e);
+				Cu.reportError(e);
 				menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorCantExportMessage'));
 			}
 		});
@@ -239,7 +240,7 @@ var menuIconOptions =
 			}
 			catch (e)
 			{
-				Components.utils.reportError(e);
+				Cu.reportError(e);
 				this.prompts.alert(null, this.strings.getString('errorTitle'), this.strings.getString('errorCantDeleteMessage'));
 				return;
 			}
@@ -360,7 +361,7 @@ var menuIconOptions =
 		}
 		catch(e)
 		{
-			Components.utils.reportError(e); // report the error
+			Cu.reportError(e); // report the error
 			return false;
 		}
 
@@ -386,7 +387,7 @@ var menuIconOptions =
 		}
 		catch(e)
 		{
-			Components.utils.reportError(e); // report the error
+			Cu.reportError(e); // report the error
 			return false;
 		}
 	},
