@@ -34,20 +34,22 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
+const Cc = Components.classes;
+
 var menuIconOptions = {
   onLoad: function() {
     // initialization code
     this.strings = document.getElementById('menuiconsplus-strings');
-    this.prefs = Components.classes['@mozilla.org/preferences-service;1']
+    this.prefs = Cc['@mozilla.org/preferences-service;1']
                            .getService(Components.interfaces.nsIPrefService)
                            .getBranch('extensions.menuiconsplus.');
-    this.prompts = Components.classes['@mozilla.org/embedcomp/prompt-service;1']
+    this.prompts = Cc['@mozilla.org/embedcomp/prompt-service;1']
                              .getService(Components.interfaces.nsIPromptService);
     this.updateIconSetMenu();
     // load current prefs into an object (I use this instead of a pref observer)
     this.oldPrefVals = this.loadPrefValues();
     this.newPrefVals = null;
-    var browserPrefs = Components.classes['@mozilla.org/preferences-service;1']
+    var browserPrefs = Cc['@mozilla.org/preferences-service;1']
                                  .getService(Components.interfaces.nsIPrefService)
                                  .getBranch('browser.preferences.');
     if (browserPrefs.getBoolPref('instantApply')) {
@@ -128,7 +130,7 @@ var menuIconOptions = {
       cssFile.append(aIconSet + '.css');
       // get destination folder (chosen by user)
       var nsIFilePicker = Components.interfaces.nsIFilePicker;
-      var fp = Components.classes['@mozilla.org/filepicker;1'].createInstance(nsIFilePicker);
+      var fp = Cc['@mozilla.org/filepicker;1'].createInstance(nsIFilePicker);
       fp.init(window, menuIconOptions.strings.getString('filepickerSelectFolder'), nsIFilePicker.modeGetFolder);
       var result = fp.show();
       if (result != nsIFilePicker.returnOK)
@@ -260,9 +262,9 @@ var menuIconOptions = {
                                           aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's, just to be safe
       return false;
     // set up stylesheet service
-    var sss = Components.classes['@mozilla.org/content/style-sheet-service;1']
+    var sss = Cc['@mozilla.org/content/style-sheet-service;1']
                         .getService(Components.interfaces.nsIStyleSheetService);
-    var ios = Components.classes['@mozilla.org/network/io-service;1']
+    var ios = Cc['@mozilla.org/network/io-service;1']
                         .getService(Components.interfaces.nsIIOService);
     try {
       var uri = ios.newURI(aChromeURI, null, null);
@@ -282,9 +284,9 @@ var menuIconOptions = {
                                           aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's
       return false;
     // set up stylesheet service
-    var sss = Components.classes['@mozilla.org/content/style-sheet-service;1']
+    var sss = Cc['@mozilla.org/content/style-sheet-service;1']
                         .getService(Components.interfaces.nsIStyleSheetService);
-    var ios = Components.classes['@mozilla.org/network/io-service;1']
+    var ios = Cc['@mozilla.org/network/io-service;1']
                         .getService(Components.interfaces.nsIIOService);
     try {
       var uri = ios.newURI(aChromeURI, null, null);
@@ -295,7 +297,7 @@ var menuIconOptions = {
     }
   },
   getCustomDir: function() {
-    var dir = Components.classes['@mozilla.org/file/directory_service;1']
+    var dir = Cc['@mozilla.org/file/directory_service;1']
                         .getService(Components.interfaces.nsIProperties)
                         .get('ProfD', Components.interfaces.nsIFile);
     dir.append('customicons');
