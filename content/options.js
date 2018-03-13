@@ -39,369 +39,369 @@ const Cc = Components.classes;
 
 var menuIconOptions =
 {
-  onLoad: function()
-  {
-    // initialization code
-    this.strings = document.getElementById('menuiconsplus-strings');
-    this.prefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('extensions.menuiconsplus.');
-    this.prompts = Cc['@mozilla.org/embedcomp/prompt-service;1'].getService(Ci.nsIPromptService);
-    this.updateIconSetMenu();
+	onLoad: function()
+	{
+		// initialization code
+		this.strings = document.getElementById('menuiconsplus-strings');
+		this.prefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('extensions.menuiconsplus.');
+		this.prompts = Cc['@mozilla.org/embedcomp/prompt-service;1'].getService(Ci.nsIPromptService);
+		this.updateIconSetMenu();
 
-    // load current prefs into an object (I use this instead of a pref observer)
-    this.oldPrefVals = this.loadPrefValues();
-    this.newPrefVals = null;
-    var browserPrefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('browser.preferences.');
-    if (browserPrefs.getBoolPref('instantApply'))
-    {
-      var prefWin = document.getElementById('menuiconsplus-preferences');
-      prefWin.addEventListener('dialogcancel', function()
-      {
-        return menuIconOptions.accept();
-      });
-    }
-    this.initialized = true;
-  },
+		// load current prefs into an object (I use this instead of a pref observer)
+		this.oldPrefVals = this.loadPrefValues();
+		this.newPrefVals = null;
+		var browserPrefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('browser.preferences.');
+		if (browserPrefs.getBoolPref('instantApply'))
+		{
+			var prefWin = document.getElementById('menuiconsplus-preferences');
+			prefWin.addEventListener('dialogcancel', function()
+			{
+				return menuIconOptions.accept();
+			});
+		}
+		this.initialized = true;
+	},
 
-  accept: function()
-  {
-    var iconSetMenuVal = document.getElementById('iconset-menu').value,
-        iconStyleSheet = '';
+	accept: function()
+	{
+		var iconSetMenuVal = document.getElementById('iconset-menu').value,
+			iconStyleSheet = '';
 
-    if (iconSetMenuVal.length)
-      iconStyleSheet = iconSetMenuVal.slice(0, iconSetMenuVal.length - 4) + '.css';
+		if (iconSetMenuVal.length)
+			iconStyleSheet = iconSetMenuVal.slice(0, iconSetMenuVal.length - 4) + '.css';
 
-    this.prefs.setCharPref('icongridstylesheet', iconStyleSheet);
+		this.prefs.setCharPref('icongridstylesheet', iconStyleSheet);
 
-    // if no icon set is selected, use Firefox default checkmarks
-    var iconSetCheckmarks = document.getElementById('iconset-checkmarks-radio');
+		// if no icon set is selected, use Firefox default checkmarks
+		var iconSetCheckmarks = document.getElementById('iconset-checkmarks-radio');
 
-    if (iconSetCheckmarks.disabled && iconSetCheckmarks.selected)
-      this.prefs.setIntPref('checkmarkstyle', 0);
+		if (iconSetCheckmarks.disabled && iconSetCheckmarks.selected)
+			this.prefs.setIntPref('checkmarkstyle', 0);
 
-    // compare old pref values to new pref values in order to put the changes into effect without restart
-    this.newPrefVals = this.loadPrefValues();
-    var checkExternalIcons = false;
+		// compare old pref values to new pref values in order to put the changes into effect without restart
+		this.newPrefVals = this.loadPrefValues();
+		var checkExternalIcons = false;
 
-    for (var i = 0; i < this.newPrefVals.length; i++)
-    {
-      if (this.oldPrefVals[i].value != this.newPrefVals[i].value)
-      {
-        switch (this.newPrefVals[i].name)
-        {
-          case 'icongridstylesheet':
-            checkExternalIcons = true;
-            break;
+		for (var i = 0; i < this.newPrefVals.length; i++)
+		{
+			if (this.oldPrefVals[i].value != this.newPrefVals[i].value)
+			{
+				switch (this.newPrefVals[i].name)
+				{
+					case 'icongridstylesheet':
+						checkExternalIcons = true;
+						break;
 
-          case 'usethememenuicons':
-            checkExternalIcons = true;
-            // if unchecking browser theme icons, also unload Classic Theme Restorer icons
-            var ctrIconsRegistered = this.isSheetActive('chrome://menuiconsplus/skin/ctr_icons.css');
-            if (ctrIconsRegistered && !this.newPrefVals[i].value)
-              this.toggleStyleSheet('chrome://menuiconsplus/skin/ctr_icons.css');
-            break;
+					case 'usethememenuicons':
+						checkExternalIcons = true;
+						// if unchecking browser theme icons, also unload Classic Theme Restorer icons
+						var ctrIconsRegistered = this.isSheetActive('chrome://menuiconsplus/skin/ctr_icons.css');
+						if (ctrIconsRegistered && !this.newPrefVals[i].value)
+							this.toggleStyleSheet('chrome://menuiconsplus/skin/ctr_icons.css');
+						break;
 
-          default:
-        }
+					default:
+				}
 
-        this.toggleStyleSheet(this.oldPrefVals[i].value);
-        this.toggleStyleSheet(this.newPrefVals[i].value);
-      }
-    }
+				this.toggleStyleSheet(this.oldPrefVals[i].value);
+				this.toggleStyleSheet(this.newPrefVals[i].value);
+			}
+		}
 
-    // (un)load the external icons, if necessary
-    if (checkExternalIcons)
-    {
-      var externalIconsRegistered = this.isSheetActive('chrome://menuiconsplus/skin/external_icons.css');
-      if (!this.prefs.getCharPref('icongridstylesheet') &&
-          !this.prefs.getBoolPref('usethememenuicons') &&
-          externalIconsRegistered)
-      {
-        this.toggleStyleSheet('chrome://menuiconsplus/skin/external_icons.css');
-      }
-      else if ((this.prefs.getCharPref('icongridstylesheet') || this.prefs.getBoolPref('usethememenuicons')) &&
-               !externalIconsRegistered)
-      {
-        this.toggleStyleSheet('chrome://menuiconsplus/skin/external_icons.css');
-      }
-    }
+		// (un)load the external icons, if necessary
+		if (checkExternalIcons)
+		{
+			var externalIconsRegistered = this.isSheetActive('chrome://menuiconsplus/skin/external_icons.css');
+			if (!this.prefs.getCharPref('icongridstylesheet') &&
+				!this.prefs.getBoolPref('usethememenuicons') &&
+				externalIconsRegistered)
+			{
+				this.toggleStyleSheet('chrome://menuiconsplus/skin/external_icons.css');
+			}
+			else if ((this.prefs.getCharPref('icongridstylesheet') || this.prefs.getBoolPref('usethememenuicons')) &&
+					!externalIconsRegistered)
+			{
+				this.toggleStyleSheet('chrome://menuiconsplus/skin/external_icons.css');
+			}
+		}
 
-    return true;
-  },
+		return true;
+	},
 
-  updatePreview: function(aImageURI)
-  {
-    document.getElementById('iconset-preview-image').style.backgroundImage = (aImageURI) ? 'url("' + aImageURI + '")' : 'none';
-    document.getElementById('delete-menuitem').disabled = (aImageURI.length) ? (aImageURI.slice(0, 28) == 'chrome://menuiconsplus/skin/') : true;
-    document.getElementById('export-menuitem').disabled = !aImageURI.length;
-    document.getElementById('iconset-checkmarks-radio').disabled = !aImageURI.length;
-  },
+	updatePreview: function(aImageURI)
+	{
+		document.getElementById('iconset-preview-image').style.backgroundImage = (aImageURI) ? 'url("' + aImageURI + '")' : 'none';
+		document.getElementById('delete-menuitem').disabled = (aImageURI.length) ? (aImageURI.slice(0, 28) == 'chrome://menuiconsplus/skin/') : true;
+		document.getElementById('export-menuitem').disabled = !aImageURI.length;
+		document.getElementById('iconset-checkmarks-radio').disabled = !aImageURI.length;
+	},
 
-  doImportWizard: function()
-  {
-    var wizWin = window.open('import.xul','menuiconsplusimportwizard','chrome=yes,alwaysRaised=yes,centerscreen=yes,dialog=yes');
-  },
+	doImportWizard: function()
+	{
+		var wizWin = window.open('import.xul','menuiconsplusimportwizard','chrome=yes,alwaysRaised=yes,centerscreen=yes,dialog=yes');
+	},
 
-  doExport: function(aIconSet)
-  {
-    Components.utils.import('resource://gre/modules/AddonManager.jsm');
-    AddonManager.getAddonByID('menuiconsplus@vitalikp', function(addon)
-    {
-      var addonDir = addon.getResourceURI('').QueryInterface(Ci.nsIFileURL).file,
-          pngFile = addonDir.clone();
+	doExport: function(aIconSet)
+	{
+		Components.utils.import('resource://gre/modules/AddonManager.jsm');
+		AddonManager.getAddonByID('menuiconsplus@vitalikp', function(addon)
+		{
+			var addonDir = addon.getResourceURI('').QueryInterface(Ci.nsIFileURL).file,
+				pngFile = addonDir.clone();
 
-      pngFile.append('skin');
+			pngFile.append('skin');
 
-      // window.dump('MenuIconsPlus: ' + pngFile.path + '\n');
-      if (['Crystal Project', 'Fugue', 'Oxygen', 'Silk', 'Tango'].indexOf(aIconSet) == -1)
-        pngFile = menuIconOptions.getCustomDir();
+			// window.dump('MenuIconsPlus: ' + pngFile.path + '\n');
+			if (['Crystal Project', 'Fugue', 'Oxygen', 'Silk', 'Tango'].indexOf(aIconSet) == -1)
+				pngFile = menuIconOptions.getCustomDir();
 
-      var cssFile = pngFile.clone();
+			var cssFile = pngFile.clone();
 
-      pngFile.append(aIconSet + '.png');
-      cssFile.append(aIconSet + '.css');
+			pngFile.append(aIconSet + '.png');
+			cssFile.append(aIconSet + '.css');
 
-      // get destination folder (chosen by user)
-      var nsIFilePicker = Ci.nsIFilePicker;
-      var fp = Cc['@mozilla.org/filepicker;1'].createInstance(nsIFilePicker);
+			// get destination folder (chosen by user)
+			var nsIFilePicker = Ci.nsIFilePicker;
+			var fp = Cc['@mozilla.org/filepicker;1'].createInstance(nsIFilePicker);
 
-      fp.init(window, menuIconOptions.strings.getString('filepickerSelectFolder'), nsIFilePicker.modeGetFolder);
+			fp.init(window, menuIconOptions.strings.getString('filepickerSelectFolder'), nsIFilePicker.modeGetFolder);
 
-      var result = fp.show();
-      if (result != nsIFilePicker.returnOK)
-        return;
+			var result = fp.show();
+			if (result != nsIFilePicker.returnOK)
+				return;
 
-      // before doing the copy, confirm if a file of that name already exists in the destination folder
-      var dir = fp.file,
-          pngFileTest = dir.clone(),
-          cssFileTest = dir.clone();
+			// before doing the copy, confirm if a file of that name already exists in the destination folder
+			var dir = fp.file,
+				pngFileTest = dir.clone(),
+				cssFileTest = dir.clone();
 
-      pngFileTest.append(aIconSet + '.png');
-      cssFileTest.append(aIconSet + '.css');
+			pngFileTest.append(aIconSet + '.png');
+			cssFileTest.append(aIconSet + '.css');
 
-      if (pngFileTest.exists() || cssFileTest.exists())
-      {
-        var result = menuIconOptions.prompts.confirm(null, menuIconOptions.strings.getString('confirmFileReplaceTitle'), menuIconOptions.strings.getString('confirmFileReplaceMessage'));
-        if (result)
-        { // go ahead and overwrite it
-          try
-          {
-            if (pngFileTest.exists())
-              pngFileTest.remove(false);
-            if (cssFileTest.exists())
-              cssFileTest.remove(false);
-          }
-          catch (e)
-          {
-            Components.utils.reportError(e);
+			if (pngFileTest.exists() || cssFileTest.exists())
+			{
+				var result = menuIconOptions.prompts.confirm(null, menuIconOptions.strings.getString('confirmFileReplaceTitle'), menuIconOptions.strings.getString('confirmFileReplaceMessage'));
+				if (result)
+				{ // go ahead and overwrite it
+					try
+					{
+						if (pngFileTest.exists())
+							pngFileTest.remove(false);
+						if (cssFileTest.exists())
+							cssFileTest.remove(false);
+					}
+					catch (e)
+					{
+						Components.utils.reportError(e);
 
-            if (e.name == 'NS_ERROR_FILE_ACCESS_DENIED')
-              menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorAccessDeniedMessage'));
-            else
-              menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorCantOverwriteTargetMessage'));
-            return;
-          }
-        }
-        else // abort the mission
-          return;
-      }
-      // peform the file copy
-      try
-      {
-        pngFile.copyTo(dir, '');
-        cssFile.copyTo(dir, '');
-      }
-      catch (e)
-      {
-        Components.utils.reportError(e);
-        menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorCantExportMessage'));
-      }
-    });
-  },
+						if (e.name == 'NS_ERROR_FILE_ACCESS_DENIED')
+							menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorAccessDeniedMessage'));
+						else
+							menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorCantOverwriteTargetMessage'));
+						return;
+					}
+				}
+				else // abort the mission
+					return;
+			}
+			// peform the file copy
+			try
+			{
+				pngFile.copyTo(dir, '');
+				cssFile.copyTo(dir, '');
+			}
+			catch (e)
+			{
+				Components.utils.reportError(e);
+				menuIconOptions.prompts.alert(null, menuIconOptions.strings.getString('errorTitle'), menuIconOptions.strings.getString('errorCantExportMessage'));
+			}
+		});
+	},
 
-  doDelete: function(aIconSet)
-  {
-    var pngFile = this.getCustomDir(),
-        cssFile = pngFile.clone();
+	doDelete: function(aIconSet)
+	{
+		var pngFile = this.getCustomDir(),
+			cssFile = pngFile.clone();
 
-    pngFile.append(aIconSet + '.png');
-    cssFile.append(aIconSet + '.css');
+		pngFile.append(aIconSet + '.png');
+		cssFile.append(aIconSet + '.css');
 
-    var result = this.prompts.confirm(null, this.strings.getString('confirmDeleteTitle'), this.strings.getFormattedString('confirmDeleteMessage', [aIconSet]));
-    if (result)
-    {
-      try
-      {
-        if (pngFile.exists())
-          pngFile.remove(false);
+		var result = this.prompts.confirm(null, this.strings.getString('confirmDeleteTitle'), this.strings.getFormattedString('confirmDeleteMessage', [aIconSet]));
+		if (result)
+		{
+			try
+			{
+				if (pngFile.exists())
+					pngFile.remove(false);
+		
+				if (cssFile.exists())
+					cssFile.remove(false);
+			}
+			catch (e)
+			{
+				Components.utils.reportError(e);
+				this.prompts.alert(null, this.strings.getString('errorTitle'), this.strings.getString('errorCantDeleteMessage'));
+				return;
+			}
 
-        if (cssFile.exists())
-          cssFile.remove(false);
-      }
-      catch (e)
-      {
-        Components.utils.reportError(e);
-        this.prompts.alert(null, this.strings.getString('errorTitle'), this.strings.getString('errorCantDeleteMessage'));
-        return;
-      }
+			// change pref if the selected icon set was deleted
+			var iconSetMenu = document.getElementById('iconset-menu'),
+				stylesheetURI = this.prefs.getCharPref('icongridstylesheet'),
+				imageURI = stylesheetURI.slice(0, stylesheetURI.length - 4) + '.png';
 
-      // change pref if the selected icon set was deleted
-      var iconSetMenu = document.getElementById('iconset-menu'),
-          stylesheetURI = this.prefs.getCharPref('icongridstylesheet'),
-          imageURI = stylesheetURI.slice(0, stylesheetURI.length - 4) + '.png';
+			if (imageURI == iconSetMenu.value)
+			{
+				this.prefs.setCharPref('icongridstylesheet', 'chrome://menuiconsplus/skin/Fugue.css'); // this is the default
+			}
 
-      if (imageURI == iconSetMenu.value)
-      {
-        this.prefs.setCharPref('icongridstylesheet', 'chrome://menuiconsplus/skin/Fugue.css'); // this is the default
-      }
+			this.updateIconSetMenu();
+		}
+	},
 
-      this.updateIconSetMenu();
-    }
-  },
+	updateIconSetMenu: function()
+	{
+		var iconSetMenu = document.getElementById('iconset-menu');
+		while (iconSetMenu.hasChildNodes())
+		{ // clear menu if necessary
+			iconSetMenu.removeChild(iconSetMenu.lastChild);
+		}
 
-  updateIconSetMenu: function()
-  {
-    var iconSetMenu = document.getElementById('iconset-menu');
-    while (iconSetMenu.hasChildNodes())
-    { // clear menu if necessary
-      iconSetMenu.removeChild(iconSetMenu.lastChild);
-    }
+		var iconSets = new Array({label: this.strings.getString('labelNone'), value: ''},
+								 {label: 'Crystal Project', value: 'chrome://menuiconsplus/skin/CrystalProject.png'},
+								 {label: 'Fugue', value: 'chrome://menuiconsplus/skin/Fugue.png'},
+								 {label: 'Oxygen', value: 'chrome://menuiconsplus/skin/Oxygen.png'},
+								 {label: 'Silk', value: 'chrome://menuiconsplus/skin/Silk.png'},
+								 {label: 'Tango', value: 'chrome://menuiconsplus/skin/Tango.png'});
 
-    var iconSets = new Array({label: this.strings.getString('labelNone'), value: ''},
-                             {label: 'Crystal Project', value: 'chrome://menuiconsplus/skin/CrystalProject.png'},
-                             {label: 'Fugue', value: 'chrome://menuiconsplus/skin/Fugue.png'},
-                             {label: 'Oxygen', value: 'chrome://menuiconsplus/skin/Oxygen.png'},
-                             {label: 'Silk', value: 'chrome://menuiconsplus/skin/Silk.png'},
-                             {label: 'Tango', value: 'chrome://menuiconsplus/skin/Tango.png'});
+		var dir = this.getCustomDir(), // dir is the customicons folder, where user-made icon sets are stored
+			path = 'file:///' + dir.path.replace(/\\/g, '\/').replace(/^\s*\/?/, '') + '/',
+			entries = dir.directoryEntries, entry = null;
 
-    var dir = this.getCustomDir(), // dir is the customicons folder, where user-made icon sets are stored
-        path = 'file:///' + dir.path.replace(/\\/g, '\/').replace(/^\s*\/?/, '') + '/',
-        entries = dir.directoryEntries, entry = null;
+		while (entries.hasMoreElements() && (entry = entries.getNext()) != null)
+		{
+			entry.QueryInterface(Ci.nsIFile);
+			var fileName = entry.leafName,
+				iconSetName = fileName.slice(0, -4),
+				fileExt = fileName.slice(fileName.length - 4, fileName.length).toLowerCase();
 
-    while (entries.hasMoreElements() && (entry = entries.getNext()) != null)
-    {
-      entry.QueryInterface(Ci.nsIFile);
-      var fileName = entry.leafName,
-          iconSetName = fileName.slice(0, -4),
-          fileExt = fileName.slice(fileName.length - 4, fileName.length).toLowerCase();
+			if (entry.isFile() && fileExt == '.png')
+				iconSets.push({label: iconSetName, value: path + fileName});
+		}
 
-      if (entry.isFile() && fileExt == '.png')
-        iconSets.push({label: iconSetName, value: path + fileName});
-    }
+		// sort the icon sets by label
+		iconSets.sort(function(a, b)
+		{
+			if (a.label.toLowerCase() > b.label.toLowerCase())
+				return 1;
 
-    // sort the icon sets by label
-    iconSets.sort(function(a, b)
-    {
-        if (a.label.toLowerCase() > b.label.toLowerCase())
-            return 1;
+			if (a.label.toLowerCase() < b.label.toLowerCase())
+				return -1;
 
-        if (a.label.toLowerCase() < b.label.toLowerCase())
-            return -1;
+			return 0;
+		});
 
-        return 0;
-    });
+		var stylesheetURI = this.prefs.getCharPref('icongridstylesheet'),
+			imageURI = (stylesheetURI.length) ? stylesheetURI.slice(0, stylesheetURI.length - 4) + '.png' : '';
 
-    var stylesheetURI = this.prefs.getCharPref('icongridstylesheet'),
-        imageURI = (stylesheetURI.length) ? stylesheetURI.slice(0, stylesheetURI.length - 4) + '.png' : '';
+		for (var i = 0; i < iconSets.length; i++)
+		{
+			iconSetMenu.appendItem(iconSets[i].label, iconSets[i].value);
 
-    for (var i = 0; i < iconSets.length; i++)
-    {
-      iconSetMenu.appendItem(iconSets[i].label, iconSets[i].value);
+			if (imageURI == iconSets[i].value)
+				iconSetMenu.selectedIndex = i;
+		}
+	},
 
-      if (imageURI == iconSets[i].value)
-        iconSetMenu.selectedIndex = i;
-    }
-  },
+	loadPrefValues: function()
+	{
+		var checkmarkStyle = 'chrome://menuiconsplus/skin/os_checkmarks_radiobuttons.css',
+			checkmarkVal = document.getElementById('checkmark-style-radiogroup').value;
 
-  loadPrefValues: function()
-  {
-    var checkmarkStyle = 'chrome://menuiconsplus/skin/os_checkmarks_radiobuttons.css',
-        checkmarkVal = document.getElementById('checkmark-style-radiogroup').value;
+		if (checkmarkVal == 1)
+			checkmarkStyle = 'chrome://menuiconsplus/skin/alt_checkmarks_radiobuttons.css';
+		else if (checkmarkVal == 2)
+			checkmarkStyle = 'chrome://menuiconsplus/skin/iconset_checkmarks_radiobuttons.css';
 
-    if (checkmarkVal == 1)
-      checkmarkStyle = 'chrome://menuiconsplus/skin/alt_checkmarks_radiobuttons.css';
-    else if (checkmarkVal == 2)
-      checkmarkStyle = 'chrome://menuiconsplus/skin/iconset_checkmarks_radiobuttons.css';
+		var newArray = new Array({name: 'checkmarkstyle',
+								  value: checkmarkStyle},
+								 {name: 'showcoloredicons',
+								  value: (document.getElementById('color-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/color-icons.css' : ''},
+								 {name: 'showidentityicons',
+								  value: (document.getElementById('identity-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/identity.css' : ''},
+								 {name: 'hidedisabledmenuicons',
+								  value: (document.getElementById('hide-disabled-checkbox').checked) ? 'chrome://menuiconsplus/skin/hide_disabled.css' : ''},
+								 {name: 'usethememenuicons',
+								  value: (document.getElementById('theme-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/browser_theme_icons.css' : ''},
+								 {name: 'icongridstylesheet',
+								  value: this.prefs.getCharPref('icongridstylesheet')});
 
-    var newArray = new Array({name: 'checkmarkstyle',
-                              value: checkmarkStyle},
-                             {name: 'showcoloredicons',
-                              value: (document.getElementById('color-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/color-icons.css' : ''},
-                             {name: 'showidentityicons',
-                              value: (document.getElementById('identity-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/identity.css' : ''},
-                             {name: 'hidedisabledmenuicons',
-                              value: (document.getElementById('hide-disabled-checkbox').checked) ? 'chrome://menuiconsplus/skin/hide_disabled.css' : ''},
-                             {name: 'usethememenuicons',
-                              value: (document.getElementById('theme-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/browser_theme_icons.css' : ''},
-                             {name: 'icongridstylesheet',
-                              value: this.prefs.getCharPref('icongridstylesheet')});
+		return newArray; // contains pref names and their corresponding stylesheet URI's
+	},
 
-    return newArray; // contains pref names and their corresponding stylesheet URI's
-  },
+	toggleStyleSheet: function(aChromeURI)
+	{
+		// check param
+		if (typeof aChromeURI != 'string' || (aChromeURI.slice(0, 9) != 'chrome://' &&
+				aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's, just to be safe
+			return false;
 
-  toggleStyleSheet: function(aChromeURI)
-  {
-    // check param
-    if (typeof aChromeURI != 'string' || (aChromeURI.slice(0, 9) != 'chrome://' &&
-                                          aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's, just to be safe
-      return false;
+		// set up stylesheet service
+		var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
+		var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
 
-    // set up stylesheet service
-    var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
-    var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
+		try
+		{
+			var uri = ios.newURI(aChromeURI, null, null);
 
-    try
-    {
-      var uri = ios.newURI(aChromeURI, null, null);
+			if (!sss.sheetRegistered(uri, sss.AGENT_SHEET))
+				sss.loadAndRegisterSheet(uri, sss.AGENT_SHEET);
+			else
+				sss.unregisterSheet(uri, sss.AGENT_SHEET);
+		}
+		catch(e)
+		{
+			Components.utils.reportError(e); // report the error
+			return false;
+		}
 
-      if (!sss.sheetRegistered(uri, sss.AGENT_SHEET))
-        sss.loadAndRegisterSheet(uri, sss.AGENT_SHEET);
-      else
-        sss.unregisterSheet(uri, sss.AGENT_SHEET);
-    }
-    catch(e)
-    {
-        Components.utils.reportError(e); // report the error
-        return false;
-    }
+		return true;
+	},
 
-    return true;
-  },
+	isSheetActive: function(aChromeURI)
+	{
+		// check param
+		if (typeof aChromeURI != 'string' || (aChromeURI.slice(0, 9) != 'chrome://' &&
+				aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's
+			return false;
 
-  isSheetActive: function(aChromeURI)
-  {
-    // check param
-    if (typeof aChromeURI != 'string' || (aChromeURI.slice(0, 9) != 'chrome://' &&
-                                          aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's
-      return false;
+		// set up stylesheet service
+		var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
+		var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
 
-    // set up stylesheet service
-    var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
-    var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
+		try
+		{
+			var uri = ios.newURI(aChromeURI, null, null);
 
-    try
-    {
-      var uri = ios.newURI(aChromeURI, null, null);
+			return sss.sheetRegistered(uri, sss.AGENT_SHEET);
+		}
+		catch(e)
+		{
+			Components.utils.reportError(e); // report the error
+			return false;
+		}
+	},
 
-      return sss.sheetRegistered(uri, sss.AGENT_SHEET);
-    }
-    catch(e)
-    {
-        Components.utils.reportError(e); // report the error
-        return false;
-    }
-  },
+	getCustomDir: function()
+	{
+		var dir = Cc['@mozilla.org/file/directory_service;1'].getService(Ci.nsIProperties).get('ProfD', Ci.nsIFile);
 
-  getCustomDir: function()
-  {
-    var dir = Cc['@mozilla.org/file/directory_service;1'].getService(Ci.nsIProperties).get('ProfD', Ci.nsIFile);
+		dir.append('customicons');
 
-    dir.append('customicons');
+		if (!dir.exists() || !dir.isDirectory()) // if the folder doesn't exist, create it
+			dir.create(Ci.nsIFile.DIRECTORY_TYPE, parseInt("0777", 8));
 
-    if (!dir.exists() || !dir.isDirectory()) // if the folder doesn't exist, create it
-      dir.create(Ci.nsIFile.DIRECTORY_TYPE, parseInt("0777", 8));
-
-    return dir;
-  }
+		return dir;
+	}
 };
 
 window.addEventListener('load', function(e) { menuIconOptions.onLoad(e); }, false);
