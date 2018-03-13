@@ -34,24 +34,20 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
+const Ci = Components.interfaces;
 const Cc = Components.classes;
 
 var menuIconOptions = {
   onLoad: function() {
     // initialization code
     this.strings = document.getElementById('menuiconsplus-strings');
-    this.prefs = Cc['@mozilla.org/preferences-service;1']
-                           .getService(Components.interfaces.nsIPrefService)
-                           .getBranch('extensions.menuiconsplus.');
-    this.prompts = Cc['@mozilla.org/embedcomp/prompt-service;1']
-                             .getService(Components.interfaces.nsIPromptService);
+    this.prefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('extensions.menuiconsplus.');
+    this.prompts = Cc['@mozilla.org/embedcomp/prompt-service;1'].getService(Ci.nsIPromptService);
     this.updateIconSetMenu();
     // load current prefs into an object (I use this instead of a pref observer)
     this.oldPrefVals = this.loadPrefValues();
     this.newPrefVals = null;
-    var browserPrefs = Cc['@mozilla.org/preferences-service;1']
-                                 .getService(Components.interfaces.nsIPrefService)
-                                 .getBranch('browser.preferences.');
+    var browserPrefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('browser.preferences.');
     if (browserPrefs.getBoolPref('instantApply')) {
       var prefWin = document.getElementById('menuiconsplus-preferences');
       prefWin.addEventListener('dialogcancel', function() {
@@ -119,7 +115,7 @@ var menuIconOptions = {
   doExport: function(aIconSet) {
     Components.utils.import('resource://gre/modules/AddonManager.jsm');
     AddonManager.getAddonByID('menuiconsplus@vitalikp', function(addon) {
-      var addonDir = addon.getResourceURI('').QueryInterface(Components.interfaces.nsIFileURL).file,
+      var addonDir = addon.getResourceURI('').QueryInterface(Ci.nsIFileURL).file,
           pngFile = addonDir.clone();
       pngFile.append('skin');
       // window.dump('MenuIconsPlus: ' + pngFile.path + '\n');
@@ -129,7 +125,7 @@ var menuIconOptions = {
       pngFile.append(aIconSet + '.png');
       cssFile.append(aIconSet + '.css');
       // get destination folder (chosen by user)
-      var nsIFilePicker = Components.interfaces.nsIFilePicker;
+      var nsIFilePicker = Ci.nsIFilePicker;
       var fp = Cc['@mozilla.org/filepicker;1'].createInstance(nsIFilePicker);
       fp.init(window, menuIconOptions.strings.getString('filepickerSelectFolder'), nsIFilePicker.modeGetFolder);
       var result = fp.show();
@@ -216,7 +212,7 @@ var menuIconOptions = {
         path = 'file:///' + dir.path.replace(/\\/g, '\/').replace(/^\s*\/?/, '') + '/',
         entries = dir.directoryEntries, entry = null;
     while (entries.hasMoreElements() && (entry = entries.getNext()) != null) {
-      entry.QueryInterface(Components.interfaces.nsIFile);
+      entry.QueryInterface(Ci.nsIFile);
       var fileName = entry.leafName,
           iconSetName = fileName.slice(0, -4),
           fileExt = fileName.slice(fileName.length - 4, fileName.length).toLowerCase();
@@ -262,10 +258,8 @@ var menuIconOptions = {
                                           aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's, just to be safe
       return false;
     // set up stylesheet service
-    var sss = Cc['@mozilla.org/content/style-sheet-service;1']
-                        .getService(Components.interfaces.nsIStyleSheetService);
-    var ios = Cc['@mozilla.org/network/io-service;1']
-                        .getService(Components.interfaces.nsIIOService);
+    var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
+    var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
     try {
       var uri = ios.newURI(aChromeURI, null, null);
       if (!sss.sheetRegistered(uri, sss.AGENT_SHEET))
@@ -284,10 +278,8 @@ var menuIconOptions = {
                                           aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's
       return false;
     // set up stylesheet service
-    var sss = Cc['@mozilla.org/content/style-sheet-service;1']
-                        .getService(Components.interfaces.nsIStyleSheetService);
-    var ios = Cc['@mozilla.org/network/io-service;1']
-                        .getService(Components.interfaces.nsIIOService);
+    var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
+    var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
     try {
       var uri = ios.newURI(aChromeURI, null, null);
       return sss.sheetRegistered(uri, sss.AGENT_SHEET);
@@ -297,12 +289,10 @@ var menuIconOptions = {
     }
   },
   getCustomDir: function() {
-    var dir = Cc['@mozilla.org/file/directory_service;1']
-                        .getService(Components.interfaces.nsIProperties)
-                        .get('ProfD', Components.interfaces.nsIFile);
+    var dir = Cc['@mozilla.org/file/directory_service;1'].getService(Ci.nsIProperties).get('ProfD', Ci.nsIFile);
     dir.append('customicons');
     if (!dir.exists() || !dir.isDirectory()) // if the folder doesn't exist, create it
-      dir.create(Components.interfaces.nsIFile.DIRECTORY_TYPE, parseInt("0777", 8));
+      dir.create(Ci.nsIFile.DIRECTORY_TYPE, parseInt("0777", 8));
     return dir;
   }
 };
