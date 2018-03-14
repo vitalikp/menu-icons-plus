@@ -42,6 +42,8 @@ var menuIconOptions =
 {
 	onLoad: function()
 	{
+		this.OS = Cc['@mozilla.org/xre/app-info;1'].getService(Ci.nsIXULRuntime).OS;
+
 		// initialization code
 		this.strings = document.getElementById('menuiconsplus-strings');
 		this.prefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('extensions.menuiconsplus.');
