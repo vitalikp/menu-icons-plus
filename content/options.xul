@@ -71,7 +71,7 @@
   </prefpane>
 
   <prefpane id="menuiconsplus-prefpane2" label="&menu.prefpane;">
-    <preferences>
+    <preferences id="prefpane2">
       <preference id="checkmark-style-pref" name="extensions.menuiconsplus.checkmarkstyle" type="int"/>
       <preference id="color-icons-pref" name="extensions.menuiconsplus.showcoloredicons" type="bool"/>
       <preference id="identity-icons-pref" name="extensions.menuiconsplus.showidentityicons" type="bool"/>
@@ -90,7 +90,7 @@
       </radiogroup>
     </groupbox>
     <separator class="thin"/>
-    <groupbox>
+    <groupbox id="group-icons">
       <checkbox id="color-icons-checkbox" label="&color.icons.checkbox.label;" accesskey="&color.icons.checkbox.accesskey;"
                 tooltiptext="&color.icons.checkbox.tooltip;" preference="color-icons-pref"/>
       <checkbox id="identity-icons-checkbox" label="&identity.icons.checkbox.label;" accesskey="&identity.icons.checkbox.accesskey;"
