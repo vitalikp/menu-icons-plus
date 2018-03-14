@@ -65,6 +65,17 @@ var menuIconOptions =
 		this.initialized = true;
 	},
 
+	addPrefOpt: function(node, name, type)
+	{
+		var elem;
+
+		elem = document.createElement("preference");
+		elem.setAttribute("id", name + '-pref');
+		elem.setAttribute("name", 'extensions.menuiconsplus.' + name);
+		elem.setAttribute("type", type);
+		node.appendChild(elem);
+	},
+
 	accept: function()
 	{
 		var iconSetMenuVal = document.getElementById('iconset-menu').value,
