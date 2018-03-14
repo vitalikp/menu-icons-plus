@@ -81,6 +81,8 @@ var menuIconsPlus = {
       if (key)
         this.loadStyleSheet('chrome://menuiconsplus/skin/ctr_icons.css');
     }
+    if (this.prefs.getBoolPref('usegtkicons'))
+    	this.loadStyleSheet('chrome://menuiconsplus/skin/gtkstockicons.css');
     // disabled menuitem icons
     if (this.prefs.getBoolPref('hidedisabledmenuicons'))
       this.loadStyleSheet('chrome://menuiconsplus/skin/hide_disabled.css');

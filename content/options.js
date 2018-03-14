@@ -46,6 +46,7 @@ var menuIconOptions =
 
 		// initialization code
 		this.strings = document.getElementById('menuiconsplus-strings');
+		this.optStr = document.getElementById('opt-strings');
 		this.prefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('extensions.menuiconsplus.');
 		this.prompts = Cc['@mozilla.org/embedcomp/prompt-service;1'].getService(Ci.nsIPromptService);
 		this.updateIconSetMenu();
@@ -62,6 +63,27 @@ var menuIconOptions =
 				return menuIconOptions.accept();
 			});
 		}
+
+		var node, prefs, elem;
+
+		node = document.getElementById("group-icons");
+		prefs = document.getElementById("prefpane2");
+
+		switch (this.OS)
+		{
+			case 'Linux':
+				this.addPrefOpt(prefs, "usegtkicons", "bool");
+				elem = document.createElement("checkbox");
+				if (this.prefs.getBoolPref("usegtkicons"))
+					elem.setAttribute("checked", true);
+				elem.setAttribute("label", this.optStr.getString("gtkIconsCheckbox"));
+				elem.setAttribute("accesskey", this.optStr.getString("gtkIconsCheckboxKey"));
+				elem.setAttribute("tooltiptext", this.optStr.getString("gtkIconsCheckbox"));
+				elem.setAttribute("preference", "usegtkicons-pref");
+				node.appendChild(elem);
+				break;
+		}
+
 		this.initialized = true;
 	},
 
@@ -346,6 +368,8 @@ var menuIconOptions =
 								  value: (document.getElementById('hide-disabled-checkbox').checked) ? 'chrome://menuiconsplus/skin/hide_disabled.css' : ''},
 								 {name: 'usethememenuicons',
 								  value: (document.getElementById('theme-icons-checkbox').checked) ? 'chrome://menuiconsplus/skin/browser_theme_icons.css' : ''},
+								 {name: 'usegtkicons',
+								  value: (this.prefs.getBoolPref("usegtkicons")) ? 'chrome://menuiconsplus/skin/gtkstockicons.css' : ''},
 								 {name: 'icongridstylesheet',
 								  value: this.prefs.getCharPref('icongridstylesheet')});
 

@@ -3,6 +3,7 @@ pref('extensions.menuiconsplus.showcoloredicons', true);
 pref('extensions.menuiconsplus.showidentityicons', true);
 pref('extensions.menuiconsplus.hidedisabledmenuicons', false);
 pref('extensions.menuiconsplus.usethememenuicons', false);
+pref('extensions.menuiconsplus.usegtkicons', false);
 pref('extensions.menuiconsplus.icongridstylesheet', 'chrome://menuiconsplus/skin/Fugue.css');
 pref('extensions.menuiconsplus@vitalikp.contributor.1', 'chrome://menuiconsplus/locale/about.properties');
 pref('extensions.menuiconsplus@vitalikp.contributor.2', 'chrome://menuiconsplus/locale/about.properties');

@@ -104,6 +104,7 @@
 
   <stringbundleset>
     <stringbundle id="menuiconsplus-strings" src="chrome://menuiconsplus/locale/menuiconsplus.properties"/>
+    <stringbundle id="opt-strings" src="chrome://menuiconsplus/locale/options.properties"/>
   </stringbundleset>
   <script src="chrome://menuiconsplus/content/options.js" type="application/x-javascript"/>
 
