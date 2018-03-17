@@ -5,3 +5,9 @@
 {
 	list-style-image: url(moz-icon://stock/tab-new?size=button) !important;
 }
+
+#home-button
+{
+	list-style-image: url('moz-icon://stock/go-home?size=button') !important;
+	-moz-image-region: unset !important;
+}
