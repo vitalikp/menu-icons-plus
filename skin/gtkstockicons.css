@@ -30,3 +30,9 @@
 	list-style-image: url('moz-icon://stock/go-next?size=button') !important;
 	-moz-image-region: unset !important;
 }
+
+#ctraddon_reload-button
+{
+	list-style-image: url('moz-icon://stock/view-refresh?size=button') !important;
+	-moz-image-region: unset !important;
+}
