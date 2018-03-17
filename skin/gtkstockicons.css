@@ -1,2 +1,7 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.tabs-newtab-button
+{
+	list-style-image: url(moz-icon://stock/tab-new?size=button) !important;
+}
