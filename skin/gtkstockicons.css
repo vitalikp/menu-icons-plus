@@ -36,3 +36,9 @@
 	list-style-image: url('moz-icon://stock/view-refresh?size=button') !important;
 	-moz-image-region: unset !important;
 }
+
+#ctraddon_stop-button
+{
+	list-style-image: url('moz-icon://stock/process-stop?size=button') !important;
+	-moz-image-region: unset !important;
+}
