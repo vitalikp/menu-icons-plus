@@ -17,3 +17,16 @@
 	list-style-image: url('moz-icon://stock/folder?size=button') !important;
 	-moz-image-region: unset !important; 
 }
+
+/* ctr addon */
+#ctraddon_back-button
+{
+	list-style-image: url('moz-icon://stock/go-previous?size=button') !important;
+	-moz-image-region: unset !important;
+}
+
+#ctraddon_forward-button
+{
+	list-style-image: url('moz-icon://stock/go-next?size=button') !important;
+	-moz-image-region: unset !important;
+}
