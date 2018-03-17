@@ -21,8 +21,8 @@
 	list-style-image: url("identity/notice-hover.png") !important;
 }
 
-#identity-popup-securityView,
-#identity-popup-security-content
+#identity-popup[connection=not-secure] #identity-popup-securityView,
+#identity-popup[connection=not-secure] #identity-popup-security-content
 {
 	background-image: url('identity/conn-not-secure.png') !important;
 }
