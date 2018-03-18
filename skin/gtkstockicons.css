@@ -19,6 +19,29 @@
 	-moz-image-region: unset !important; 
 }
 
+#bookmarks-menu-button
+{
+	list-style-image: url('moz-icon://stock/bookmark-new?size=button') !important;
+	-moz-image-region: unset !important;
+}
+
+#bookmarks-menu-button[starred]
+{
+	list-style-image: url('moz-icon://stock/starred?size=button') !important;
+}
+
+#ctraddon_bookmarks-menu-toolbar-button,
+#bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon
+{
+	list-style-image: url('moz-icon://stock/user-bookmarks?size=button') !important;
+	-moz-image-region: unset !important;
+}
+
+.bookmark-item[container][query]
+{
+	list-style-image: url('moz-icon://stock/folder-saved-search?size=button') !important;
+}
+
 /* ctr addon */
 #ctraddon_back-button
 {
