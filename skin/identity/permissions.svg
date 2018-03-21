@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path
-     d="m 2,1 h 20 c 1.1,0 2,0.9 2,2 v 18 c 0,1.1 -0.9,2 -2,2 H 2 C 0.9,23 0,22.1 0,21 V 3 C 0,1.9 0.9,1 2,1 Z"
-     id="path949"
-     style="fill:#0082ff;fill-opacity:1" />
-  <path
-     d="m 12,3 h 9 c 0.6,0 1,0.4 1,1 v 16 c 0,0.6 -0.4,1 -1,1 h -9 z"
-     id="path951"
-     style="fill:#ffffff" />
-  <path
-     d="M 5.5,12.5 8.2,8.8 C 8.4,8.5 8.8,8.5 9,8.7 l 0.7,0.5 c 0.2,0.2 0.2,0.5 0,0.7 L 5.8,15 C 5.6,15.2 5.3,15.3 5,15.1 L 2.8,12.9 c -0.2,-0.2 -0.2,-0.5 0,-0.7 l 0.8,-0.8 c 0.2,-0.2 0.5,-0.2 0.7,0 z"
-     id="path953"
-     style="fill:#ffffff" />
-  <rect
-     x="16.299999"
-     y="8.5"
-     transform="matrix(0.7071,-0.7071,0.7071,0.7071,-3.5061,15.5355)"
-     width="1.4"
-     height="7.0999999"
-     id="rect955"
-     style="fill:#4c4c4c;fill-opacity:1" />
-  <rect
-     x="16.299999"
-     y="8.5"
-     transform="matrix(-0.7071,-0.7071,0.7071,-0.7071,20.5355,32.5061)"
-     width="1.4"
-     height="7.0999999"
-     id="rect957"
-     style="fill:#4c4c4c;fill-opacity:1" />
+	<path
+		d="m 2,1 h 20 c 1.1,0 2,0.9 2,2 v 18 c 0,1.1 -0.9,2 -2,2 H 2 C 0.9,23 0,22.1 0,21 V 3 C 0,1.9 0.9,1 2,1 Z"
+		id="path949"
+		style="fill:#0082ff;fill-opacity:1" />
+	<path
+		d="m 12,3 h 9 c 0.6,0 1,0.4 1,1 v 16 c 0,0.6 -0.4,1 -1,1 h -9 z"
+		id="path951"
+		style="fill:#ffffff" />
+	<path
+		d="M 5.5,12.5 8.2,8.8 C 8.4,8.5 8.8,8.5 9,8.7 l 0.7,0.5 c 0.2,0.2 0.2,0.5 0,0.7 L 5.8,15 C 5.6,15.2 5.3,15.3 5,15.1 L 2.8,12.9 c -0.2,-0.2 -0.2,-0.5 0,-0.7 l 0.8,-0.8 c 0.2,-0.2 0.5,-0.2 0.7,0 z"
+		id="path953"
+		style="fill:#ffffff" />
+	<rect
+		x="16.299999"
+		y="8.5"
+		transform="matrix(0.7071,-0.7071,0.7071,0.7071,-3.5061,15.5355)"
+		width="1.4"
+		height="7.0999999"
+		id="rect955"
+		style="fill:#4c4c4c;fill-opacity:1" />
+	<rect
+		x="16.299999"
+		y="8.5"
+		transform="matrix(-0.7071,-0.7071,0.7071,-0.7071,20.5355,32.5061)"
+		width="1.4"
+		height="7.0999999"
+		id="rect957"
+		style="fill:#4c4c4c;fill-opacity:1" />
 </svg>
