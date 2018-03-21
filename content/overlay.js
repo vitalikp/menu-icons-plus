@@ -35,6 +35,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 const Ci = Components.interfaces;
+const Cu = Components.utils;
 const Cc = Components.classes;
 
 var menuIconsPlus =
@@ -188,7 +189,7 @@ var menuIconsPlus =
 		}
 		catch(e)
 		{
-			Components.utils.reportError(e); // report the error
+			Cu.reportError(e); // report the error
 			return false;
 		}
 
