@@ -34,15 +34,14 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
+const Ci = Components.interfaces;
 const Cc = Components.classes;
 
 var menuIconsPlus = {
   onLoad: function() {
     // initialization code
     this.debug = true;
-    this.prefs = Cc['@mozilla.org/preferences-service;1']
-                           .getService(Components.interfaces.nsIPrefService)
-                           .getBranch('extensions.menuiconsplus.');
+    this.prefs = Cc['@mozilla.org/preferences-service;1'].getService(Ci.nsIPrefService).getBranch('extensions.menuiconsplus.');
     // load bindings
     this.loadStyleSheet('chrome://menuiconsplus/skin/bindings.css');
     // non-Windows OS
@@ -144,10 +143,8 @@ var menuIconsPlus = {
                                           aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's, just to be safe
       return false;
     // set up stylesheet service
-    var sss = Cc['@mozilla.org/content/style-sheet-service;1']
-                        .getService(Components.interfaces.nsIStyleSheetService);
-    var ios = Cc['@mozilla.org/network/io-service;1']
-                        .getService(Components.interfaces.nsIIOService);
+    var sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
+    var ios = Cc['@mozilla.org/network/io-service;1'].getService(Ci.nsIIOService);
     try {
       var uri = ios.newURI(aChromeURI, null, null);
       if (!sss.sheetRegistered(uri, sss.AGENT_SHEET))
