@@ -4,7 +4,7 @@
 		<em:id>menuiconsplus@vitalikp</em:id>
 		<em:type>2</em:type>
 		<em:name>Menu Icons Plus</em:name>
-		<em:version>3.2.5</em:version>
+		<em:version>3.2.6-dev</em:version>
 		<em:creator>vitalikp</em:creator>
 		<em:iconURL>chrome://menuiconsplus/skin/menuiconsplus.png</em:iconURL>
 		<em:optionsURL>chrome://menuiconsplus/content/options.xul</em:optionsURL>
