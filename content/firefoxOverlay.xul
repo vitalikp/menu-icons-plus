@@ -36,27 +36,27 @@
   - ***** END LICENSE BLOCK ***** -->
 
 <overlay id="menuiconsplus-overlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <script src="chrome://menuiconsplus/content/overlay.js" type="application/x-javascript"/>
+	<script src="chrome://menuiconsplus/content/overlay.js" type="application/x-javascript"/>
 
-  <window id="main-window">
-    <observerset id="menuiconsplus-observerset">
-      <!-- observer for ViewSourceWith -->
-      <observes element="viewsourcewithMenu" attribute="image" onbroadcast="menuIconsPlus.removeAttrib([document.getElementById('viewsourcewithMenu')], 'image');"/>
-      <!-- observer for Minimap Sidebar -->
-      <observes element="addAddressPanel" attribute="image" onbroadcast="menuIconsPlus.miniMapFix();"/>
-      <!-- observers for Web Developer Extension -->
-      <observes element="web-developer-dom-inspector-toolbar" attribute="class" onbroadcast="menuIconsPlus.webDevFix('toolbar');"/>
-      <observes element="web-developer-dom-inspector-menu" attribute="class" onbroadcast="menuIconsPlus.webDevFix('menu');"/>
-      <observes element="web-developer-dom-inspector-app-menu" attribute="class" onbroadcast="menuIconsPlus.webDevFix('app-menu');"/>
-      <observes element="web-developer-dom-inspector-context" attribute="class" onbroadcast="menuIconsPlus.webDevFix('context');"/>
-    </observerset>
-  </window>
+	<window id="main-window">
+		<observerset id="menuiconsplus-observerset">
+			<!-- observer for ViewSourceWith -->
+			<observes element="viewsourcewithMenu" attribute="image" onbroadcast="menuIconsPlus.removeAttrib([document.getElementById('viewsourcewithMenu')], 'image');"/>
+			<!-- observer for Minimap Sidebar -->
+			<observes element="addAddressPanel" attribute="image" onbroadcast="menuIconsPlus.miniMapFix();"/>
+			<!-- observers for Web Developer Extension -->
+			<observes element="web-developer-dom-inspector-toolbar" attribute="class" onbroadcast="menuIconsPlus.webDevFix('toolbar');"/>
+			<observes element="web-developer-dom-inspector-menu" attribute="class" onbroadcast="menuIconsPlus.webDevFix('menu');"/>
+			<observes element="web-developer-dom-inspector-app-menu" attribute="class" onbroadcast="menuIconsPlus.webDevFix('app-menu');"/>
+			<observes element="web-developer-dom-inspector-context" attribute="class" onbroadcast="menuIconsPlus.webDevFix('context');"/>
+		</observerset>
+	</window>
 
-  <!-- toolbarspring for Web Developer Extension
-  <tabs id="web-developer-dashboard-tabs" pack="start">
-    <spacer flex="1" insertafter="web-developer-position-dashboard"/>
-  </tabs> -->
+	<!-- toolbarspring for Web Developer Extension
+	<tabs id="web-developer-dashboard-tabs" pack="start">
+		<spacer flex="1" insertafter="web-developer-position-dashboard"/>
+	</tabs> -->
 
 </overlay>
