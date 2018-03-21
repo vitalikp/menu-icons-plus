@@ -99,8 +99,12 @@ var menuIconsPlus =
 			this.loadStyleSheet('chrome://menuiconsplus/skin/ctr_icons.css');
 	}
 
-	if (this.prefs.getBoolPref('usegtkicons'))
-		this.loadStyleSheet('chrome://menuiconsplus/skin/gtkstockicons.css');
+	// Linux OS
+	if (navigator.platform.indexOf('Linux') > 0)
+	{
+		if (this.prefs.getBoolPref('usegtkicons'))
+			this.loadStyleSheet('chrome://menuiconsplus/skin/gtkstockicons.css');
+	}
 
 	// disabled menuitem icons
 	if (this.prefs.getBoolPref('hidedisabledmenuicons'))
