@@ -42,6 +42,12 @@
 	list-style-image: url('moz-icon://stock/folder-saved-search?size=button') !important;
 }
 
+#addons-notification-icon
+{
+	list-style-image: url('moz-icon://stock/application-x-addon?size=button') !important;
+	-moz-image-region: unset !important;
+}
+
 /* ctr addon */
 #ctraddon_back-button
 {
