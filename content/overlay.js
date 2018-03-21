@@ -34,11 +34,13 @@
  * 
  * ***** END LICENSE BLOCK ***** */
 
+const Cc = Components.classes;
+
 var menuIconsPlus = {
   onLoad: function() {
     // initialization code
     this.debug = true;
-    this.prefs = Components.classes['@mozilla.org/preferences-service;1']
+    this.prefs = Cc['@mozilla.org/preferences-service;1']
                            .getService(Components.interfaces.nsIPrefService)
                            .getBranch('extensions.menuiconsplus.');
     // load bindings
@@ -142,9 +144,9 @@ var menuIconsPlus = {
                                           aChromeURI.slice(0, 8) != 'file:///')) // restricted to local URI's, just to be safe
       return false;
     // set up stylesheet service
-    var sss = Components.classes['@mozilla.org/content/style-sheet-service;1']
+    var sss = Cc['@mozilla.org/content/style-sheet-service;1']
                         .getService(Components.interfaces.nsIStyleSheetService);
-    var ios = Components.classes['@mozilla.org/network/io-service;1']
+    var ios = Cc['@mozilla.org/network/io-service;1']
                         .getService(Components.interfaces.nsIIOService);
     try {
       var uri = ios.newURI(aChromeURI, null, null);
