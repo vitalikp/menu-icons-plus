@@ -40,41 +40,41 @@
 
 <dialog id="menuiconsplus-about" title="&about;" orient="vertical" autostretch="always" onload="init();" buttons="accept" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <script type="application/javascript" src="chrome://menuiconsplus/content/about.js"/>
+	<script type="application/javascript" src="chrome://menuiconsplus/content/about.js"/>
 
-  <stringbundleset id="aboutSet">
-    <stringbundle id="extensionsStrings" src="chrome://menuiconsplus/locale/about.properties"/>
-  </stringbundleset>
+	<stringbundleset id="aboutSet">
+		<stringbundle id="extensionsStrings" src="chrome://menuiconsplus/locale/about.properties"/>
+	</stringbundleset>
 
-  <groupbox align="center" orient="horizontal">
-    <vbox>
-      <hbox align="start">
-        <vbox>
-          <hbox>
-            <image src="chrome://menuiconsplus/skin/menuiconsplus.png"/>
-            <vbox>
-              <label id="extensionName" style="font-weight: bold; font-size: large;"/>
-              <label id="extensionVersion" crop="end"/>
-            </vbox>
-          </hbox>
-          <separator class="thin"/>
-          <description value="&createdBy;" style="font-weight: bold;"/>
-          <label id="extensionCreatedBy"/>
-        </vbox>
-      </hbox>
-      <separator class="thin"/>
-      <description value="&developers;" style="font-weight: bold;"/>
-      <label id="extensionDeveloper1"/>
-      <separator class="thin"/>
-      <description value="&contributors;" style="font-weight: bold;"/>
-      <vbox flex="1" id="extensionContributors" class="boxIndent"/>
-      <separator class="thin"/>
-      <description value="&translators;" style="font-weight: bold;"/>
-      <vbox flex="1" id="extensionTranslators" class="boxIndent"/>
-      <separator class="thin"/>
-      <description value="&homepage;" style="font-weight: bold;"/>
-      <label id="extensionHomepage" class="text-link" onclick="openUrl(event);"/>
-    </vbox>
-  </groupbox>
-  <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js"/>
+	<groupbox align="center" orient="horizontal">
+		<vbox>
+			<hbox align="start">
+				<vbox>
+					<hbox>
+						<image src="chrome://menuiconsplus/skin/menuiconsplus.png"/>
+						<vbox>
+							<label id="extensionName" style="font-weight: bold; font-size: large;"/>
+							<label id="extensionVersion" crop="end"/>
+						</vbox>
+					</hbox>
+					<separator class="thin"/>
+					<description value="&createdBy;" style="font-weight: bold;"/>
+					<label id="extensionCreatedBy"/>
+				</vbox>
+			</hbox>
+			<separator class="thin"/>
+			<description value="&developers;" style="font-weight: bold;"/>
+			<label id="extensionDeveloper1"/>
+			<separator class="thin"/>
+			<description value="&contributors;" style="font-weight: bold;"/>
+			<vbox flex="1" id="extensionContributors" class="boxIndent"/>
+			<separator class="thin"/>
+			<description value="&translators;" style="font-weight: bold;"/>
+			<vbox flex="1" id="extensionTranslators" class="boxIndent"/>
+			<separator class="thin"/>
+			<description value="&homepage;" style="font-weight: bold;"/>
+			<label id="extensionHomepage" class="text-link" onclick="openUrl(event);"/>
+		</vbox>
+	</groupbox>
+	<script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js"/>
 </dialog>
