@@ -100,7 +100,7 @@ var menuIconsPlus =
 	}
 
 	// Linux OS
-	if (navigator.platform.indexOf('Linux') > 0)
+	if (navigator.platform.indexOf('Linux') >= 0)
 	{
 		if (this.prefs.getBoolPref('usegtkicons'))
 			this.loadStyleSheet('chrome://menuiconsplus/skin/gtkstockicons.css');
