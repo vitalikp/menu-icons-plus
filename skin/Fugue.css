@@ -622,6 +622,7 @@ menuitem[observes="omnisidebar-viewDmgrPlacesSidebar"]:not([checked="true"])
 { -moz-image-region: rect(48px, 112px, 64px, 96px) !important; list-style-image: url("Fugue.png") !important; }
 
 /* add-ons (extension) */
+#addons-notification-icon,
 menuitem[command="Tools:Addons"],
 menuitem[key="aiosKey_addons"],
 #febe_tools_menu_restoreExtensions,
