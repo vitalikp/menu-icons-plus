@@ -26,6 +26,9 @@
 <!ENTITY identity.icons.checkbox.label "Use identity icons">
 <!ENTITY identity.icons.checkbox.accesskey "I">
 <!ENTITY identity.icons.checkbox.tooltip "Use identity icons.">
+<!ENTITY notification.icons.checkbox.label "Use notification icons">
+<!ENTITY notification.icons.checkbox.accesskey "N">
+<!ENTITY notification.icons.checkbox.tooltip "Use notification icons.">
 <!ENTITY hide.disabled.checkbox.label "Cacher les icones des éléments de menu désactivés">
 <!ENTITY hide.disabled.checkbox.accesskey "C">
 <!ENTITY hide.disabled.checkbox.tooltip "N'affiche pas d'icone à côté des commandes de menu qui sont inactives (grisées).">

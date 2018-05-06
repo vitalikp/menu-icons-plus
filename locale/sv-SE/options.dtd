@@ -26,6 +26,9 @@
 <!ENTITY identity.icons.checkbox.label "Use identity icons">
 <!ENTITY identity.icons.checkbox.accesskey "I">
 <!ENTITY identity.icons.checkbox.tooltip "Use identity icons.">
+<!ENTITY notification.icons.checkbox.label "Use notification icons">
+<!ENTITY notification.icons.checkbox.accesskey "N">
+<!ENTITY notification.icons.checkbox.tooltip "Use notification icons.">
 <!ENTITY hide.disabled.checkbox.label "Göm ikoner för icke valbara menyobjekt">
 <!ENTITY hide.disabled.checkbox.accesskey "G">
 <!ENTITY hide.disabled.checkbox.tooltip "Visar inte ikoner bredvid menyobjekt som är inaktiverade (nedtonade i grått).">

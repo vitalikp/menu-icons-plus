@@ -1,6 +1,7 @@
 pref('extensions.menuiconsplus.checkmarkstyle', 2);
 pref('extensions.menuiconsplus.showcoloredicons', true);
 pref('extensions.menuiconsplus.showidentityicons', true);
+pref('extensions.menuiconsplus.shownotificationicons', true);
 pref('extensions.menuiconsplus.hidedisabledmenuicons', false);
 pref('extensions.menuiconsplus.usethememenuicons', false);
 pref('extensions.menuiconsplus.usegtkicons', false);

@@ -26,6 +26,9 @@
 <!ENTITY identity.icons.checkbox.label "Use identity icons">
 <!ENTITY identity.icons.checkbox.accesskey "I">
 <!ENTITY identity.icons.checkbox.tooltip "Use identity icons.">
+<!ENTITY notification.icons.checkbox.label "Use notification icons">
+<!ENTITY notification.icons.checkbox.accesskey "N">
+<!ENTITY notification.icons.checkbox.tooltip "Use notification icons.">
 <!ENTITY hide.disabled.checkbox.label "Hide icons of disabled menu items">
 <!ENTITY hide.disabled.checkbox.accesskey "H">
 <!ENTITY hide.disabled.checkbox.tooltip "Does not show icons next to menu commands which are disabled (grayed out).">

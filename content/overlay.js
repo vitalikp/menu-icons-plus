@@ -88,6 +88,10 @@ var menuIconsPlus =
 	if (this.prefs.getBoolPref('showidentityicons'))
 		this.loadStyleSheet('chrome://menuiconsplus/skin/identity.css');
 
+	// show notification icons
+	if (this.prefs.getBoolPref('shownotificationicons'))
+		this.loadStyleSheet('chrome://menuiconsplus/skin/notification-icons.css');
+
 	// use theme icons
 	if (this.prefs.getBoolPref('usethememenuicons') && !nonWindows)
 	{
