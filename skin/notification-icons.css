@@ -1,2 +1,19 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.plugin-icon,
+image.messageImage[value="plugin-hidden"]
+{
+	list-style-image: url("plugin/generic.png") !important;
+}
+
+notification.pluginVulnerable
+{
+	background-color: gray !important;
+	background-image: url("plugin/stripe.svg") !important;
+}
+
+notification.pluginVulnerable image.messageImage
+{
+	list-style-image: url("plugin/blocked.png") !important;
+}
