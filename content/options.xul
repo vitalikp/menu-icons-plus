@@ -42,8 +42,6 @@
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
   <prefpane id="menuiconsplus-prefpane1" label="&iconset.prefpane;">
-    <description value="&header1.description;" class="heading1"/>
-    <description value="&header2.description;" class="heading2"/>
     <separator class="thin"/>
     <groupbox flex="1">
       <caption label="&iconset.caption;"/>
@@ -78,8 +76,6 @@
       <preference id="hide-disabled-pref" name="extensions.menuiconsplus.hidedisabledmenuicons" type="bool"/>
       <preference id="theme-icons-pref" name="extensions.menuiconsplus.usethememenuicons" type="bool"/>
     </preferences>
-    <description class="heading1">&header1.description;</description>
-    <description class="heading2">&header2.description;</description>
     <separator class="thin"/>
     <groupbox tooltiptext="&menu.checkmarks.tooltip;">
       <caption label="&menu.checkmarks.caption;"/>

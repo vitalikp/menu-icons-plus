@@ -18,13 +18,6 @@ radio[pane="menuiconsplus-prefpane2"] {
   min-width: 135px;
 }
 
-#menuiconsplus-preferences .heading1 {
-  margin-bottom: 0px;
-}
-#menuiconsplus-preferences .heading2 {
-  margin-top: 0px;
-}
-
 #iconset-box,
 #menuiconsplus-config-iconstylesheet-box {
   -moz-box-align: center;
