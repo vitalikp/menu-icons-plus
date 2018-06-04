@@ -15,7 +15,9 @@ FILES = \
 	skin
 
 
+# tools
 ZIP = /usr/bin/zip -r -q
+RSVG_CONV := /usr/bin/rsvg-convert
 
 all: $(EXT)
 
