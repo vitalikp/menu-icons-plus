@@ -19,12 +19,16 @@ FILES = \
 ZIP = /usr/bin/zip -r -q
 RSVG_CONV := /usr/bin/rsvg-convert
 
+ifneq (${V},1)
+.SILENT:
+endif
+
 all: $(EXT)
 
 $(EXT):
 	@echo "build '$(EXT)' extension"
 	@cd ext; $(ZIP) ../$(EXT).xpi $(EXT_FILES)
-	@$(ZIP) $(EXT).xpi $(FILES)
+	$(ZIP) $(EXT).xpi $(FILES)
 
 clean:
 	@echo -e '\e[1m$@ $(PACKAGE)\e[0m'
