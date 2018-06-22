@@ -20,6 +20,7 @@ ZIP = /usr/bin/zip -r -q
 RSVG_CONV := /usr/bin/rsvg-convert
 OPTIPNG := /usr/bin/optipng -q
 
+.SUFFIXES: .png .svg
 ifneq (${V},1)
 .SILENT:
 endif
