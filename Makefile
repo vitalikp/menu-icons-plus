@@ -18,6 +18,7 @@ FILES = \
 # tools
 ZIP = /usr/bin/zip -r -q
 RSVG_CONV := /usr/bin/rsvg-convert
+OPTIPNG := /usr/bin/optipng -q
 
 ifneq (${V},1)
 .SILENT:
