@@ -8,7 +8,8 @@ ICON16_SRC := \
 	identity/default.svg \
 	identity/default-hover.svg \
 	identity/notice.svg \
-	identity/notice-hover.svg
+	identity/notice-hover.svg \
+	notification/blocked.svg
 
 ICON24_SRC := \
 	identity/conn-not-secure.svg \
