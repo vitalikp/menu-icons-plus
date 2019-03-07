@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 PACKAGE = menu-icons-plus
-VERSION = 3.2.6-dev
+VERSION = 3.2.6
 EXT = $(PACKAGE)-$(VERSION)
 
 ICON16_SRC := \
