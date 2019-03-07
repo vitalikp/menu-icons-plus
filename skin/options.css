@@ -3,6 +3,8 @@
 #menuiconsplus-preferences
 {
 	max-width: none;
+	min-width: 41.25em;
+	min-height: 31.5em;
 }
 
 #menuiconsplus-preferences radio[pane]
